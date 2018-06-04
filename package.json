@@ -5,7 +5,7 @@
   "main": "src/server/main.js",
   "watch": {},
   "scripts": {
-    "watch": "node src/server/main.js"
+    "watch": "nodemon src/server/main.js"
   },
   "author": "Niko Mehtonen",
   "license": "BSD-2-Clause",
@@ -15,6 +15,6 @@
     "request": "^2.87.0"
   },
   "devDependencies": {
-    "npm-watch": "^0.3.0"
+    "nodemon": "^1.17.5"
   }
 }

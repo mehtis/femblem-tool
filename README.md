@@ -5,7 +5,6 @@ Very much WIP
 ``` bash
 npm run watch
 ```
-Note! Automatic watch still not doe
 
 ## Usage
 Go to `localhost:8081` in your browser
