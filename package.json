@@ -1,0 +1,20 @@
+{
+  "name": "fembltool",
+  "version": "0.0.1",
+  "description": "Tool for optimizing Fire Emblem character creation",
+  "main": "src/server/main.js",
+  "watch": {},
+  "scripts": {
+    "watch": "node src/server/main.js"
+  },
+  "author": "Niko Mehtonen",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.3.0"
+  }
+}
