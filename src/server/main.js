@@ -12,15 +12,17 @@ app.get('/', (req, res) => {
   request(url, (err, response, html) => {
     if(!err) {
       const $ = cheerio.load(html)
-      //TODO Scrape from a different field
-      const characterName = $('.page-header__title').text()
-
-      console.log('Sending ' + characterName)
-      res.send(characterName)
+      const characterName = $('.pi-title').text()
+      if (!characterName) {
+        console.error('Character name not found')
+        res.send('Error, character name not found')
+      } else {
+        console.log('Sending ' + characterName)
+        res.send(characterName)
+      }
       return
     }
-    //TODO Not getting to error right now, page title is show even with false
-  console.err('Error loading: '+ url)
+  console.error('Error loading: '+ url)
   res.send('Error')
   })
 })
