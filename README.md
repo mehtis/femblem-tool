@@ -12,6 +12,3 @@ You can use characterName as a query parameter (e.g. `http://localhost:8081/?cha
 
 ## Attribution
 Data downloaded from [http://fireemblem.wikia.com/wiki/Fire_Emblem_Wiki]
-
-## License
-BSD-2-Clause
