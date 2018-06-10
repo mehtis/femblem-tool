@@ -9,10 +9,10 @@ const scrape = (webpage) => {
     }
 
     //const startingClass = $('.statbox')
-    if (data) {
+    if (data.characterName) {
       resolve(data)
     } else {
-      reject(Error('Character name not found'))
+      reject(Error('Character data not found'))
     }
   })
 }

@@ -14,8 +14,14 @@ app.get('/', async (req, res) => {
     console.log('Sending ' + JSON.stringify(result))
     res.send(result)
   } catch (err) {
-    console.log(err)
-    res.send("Error")
+    if (err.statusCode && err.statusCode === 404)
+    {
+      console.log("404, Character page not found")
+      res.send("404, Character page not found")
+    } else {
+      console.log(err)
+      res.send("Error")
+    }
   }
 })
 
