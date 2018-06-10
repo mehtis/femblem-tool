@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
   try {
     const webpage = await rp(url)
     const result = await scraper(webpage)
-    console.log('Sending ' + result)
+    console.log('Sending ' + JSON.stringify(result))
     res.send(result)
   } catch (err) {
     console.log(err)
