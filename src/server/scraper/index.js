@@ -5,7 +5,7 @@ const scrape = (webpage) => {
     const $ = cheerio.load(webpage)
     const data = {
       characterName: $('.pi-title').text(),
-      startingClass: $('.statbox').first().find('td').first().find('a').last().text(),
+      startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
       growthRates: {
         hp:  growthRate($, 1),
         str:  growthRate($, 2),
@@ -15,10 +15,18 @@ const scrape = (webpage) => {
         lck:  growthRate($, 6),
         def:  growthRate($, 7),
         res:  growthRate($, 8),
+      },
+      maxStatModifiers: {
+        str:  statModifiers($, 1),
+        mag:  statModifiers($, 2),
+        skl:  statModifiers($, 3),
+        spd:  statModifiers($, 4),
+        lck:  statModifiers($, 5),
+        def:  statModifiers($, 6),
+        res:  statModifiers($, 7),
       }
     }
 
-    //const startingClass = $('.statbox')
     if (data.characterName) {
       resolve(data)
     } else {
@@ -26,8 +34,13 @@ const scrape = (webpage) => {
     }
   })
 }
-
+// TODO: growthRateWithClass (e.g. Lissa)
 const growthRate = ($, index) => {
-  return $('#Growth_Rates').parent().next().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+  return $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 }
+
+const statModifiers = ($, index) => {
+  return $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+}
+
 module.exports = scrape
