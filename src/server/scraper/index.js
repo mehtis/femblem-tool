@@ -3,9 +3,10 @@ const cheerio = require('cheerio')
 const scrape = (webpage) => {
   return new Promise((resolve, reject) => {
     const $ = cheerio.load(webpage)
-    const data = {
+    const character = {
       characterName: $('.pi-title').text(),
       startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
+      baseClasses: baseClasses($),
       growthRates: {
         //TODO: Refactor to array (also statmodifiers)?
         hp:  growthRate($, 1),
@@ -30,24 +31,21 @@ const scrape = (webpage) => {
       otherSupports: supportUnits($, 'Other Supports'),
     }
 
-    if (data.characterName) {
-      resolve(data)
+    if (character.characterName) {
+      resolve(character)
     } else {
       reject(Error('Character data not found'))
     }
   })
 }
+//TODO: Fix, map doesn't work for some reason
+const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').map( () => $(this).attr('title')).toArray()
+
 //TODO: growthRateWithClass (e.g. Lissa)
-const growthRate = ($, index) => {
-  return $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
-}
+const growthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
-const statModifiers = ($, index) => {
-  return $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
-}
+const statModifiers = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
-const supportUnits = ($, type) => {
-  return $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
-}
+const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
 module.exports = scrape
