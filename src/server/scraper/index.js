@@ -7,6 +7,7 @@ const scrape = (webpage) => {
       characterName: $('.pi-title').text(),
       startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
       growthRates: {
+        //TODO: Refactor to array (also statmodifiers)?
         hp:  growthRate($, 1),
         str:  growthRate($, 2),
         mag:  growthRate($, 3),
@@ -24,7 +25,9 @@ const scrape = (webpage) => {
         lck:  statModifiers($, 5),
         def:  statModifiers($, 6),
         res:  statModifiers($, 7),
-      }
+      },
+      romanticSupports: supportUnits($, 'Romantic Supports'),
+      otherSupports: supportUnits($, 'Other Supports'),
     }
 
     if (data.characterName) {
@@ -34,13 +37,17 @@ const scrape = (webpage) => {
     }
   })
 }
-// TODO: growthRateWithClass (e.g. Lissa)
+//TODO: growthRateWithClass (e.g. Lissa)
 const growthRate = ($, index) => {
   return $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 }
 
 const statModifiers = ($, index) => {
   return $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+}
+
+const supportUnits = ($, type) => {
+  return $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 }
 
 module.exports = scrape
