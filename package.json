@@ -1,6 +1,6 @@
 {
   "name": "fembltool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tool for optimizing Fire Emblem character creation",
   "main": "src/server/main.js",
   "watch": {},
