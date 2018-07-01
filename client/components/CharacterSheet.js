@@ -1,11 +1,25 @@
 import React from 'react'
 
 const HorizontalList = (value) => {
-  return <li>{`${value[0]}: ${value[1]}`}</li>
+  return <li>
+    {`${value[0]}: ${value[1]}`}
+    <style jsx>{`
+      li {
+        list-style: none;
+      }
+    `}</style>
+  </li>
 }
 
 const SupportList = (props) => {
-  return <li>{`${props.character}`}</li>
+  return <li>
+    {`${props.character}`}
+    <style jsx>{`
+      li {
+        list-style: none;
+      }
+    `}</style>
+  </li>
 }
 
 class CharacterSheet extends React.Component {
@@ -46,11 +60,6 @@ class CharacterSheet extends React.Component {
             return <SupportList key={character} character={character} />
           })}
         </ul>
-        <style jsx>{`
-          li {
-            list-style: none;
-          }
-        `}</style>
       </div>
     )
   }
