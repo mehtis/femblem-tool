@@ -11,7 +11,6 @@
   "author": "Niko Mehtonen",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "@zeit/next-less": "^0.3.0",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
     "isomorphic-unfetch": "^2.0.0",
@@ -25,7 +24,6 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
-    "less": "^3.0.4",
     "nodemon": "^1.17.5"
   }
 }
