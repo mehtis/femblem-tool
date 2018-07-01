@@ -10,7 +10,7 @@ const getHeaders = () => {
 
 const HeaderItem = (item) => {
   return <div>
-    <Link href={`/${item.link}`}>
+    <Link key={item.link} href={`/${item.link}`}>
       <a>{item.title}</a>
     </Link>
     <style jsx>{`
@@ -27,7 +27,7 @@ const HeaderItem = (item) => {
 const Header = () => (
   <div>
     {getHeaders().map((header) => (
-      <HeaderItem {...header} />
+      <HeaderItem key={header.link} {...header} />
     ))}
   </div>
 )
