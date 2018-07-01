@@ -1,18 +1,34 @@
 import Link from 'next/link'
 
-const linkStyle = {
-  marginRight: 15
+const getHeaders = () => {
+  return [
+    {link: 'index', title: 'Home'},
+    {link: 'tool', title: 'Tool'},
+    {link: 'about', title: 'About'}
+  ]
 }
 
-//TODO: Links dynamically
+const HeaderItem = (item) => {
+  return <div>
+    <Link href={`/${item.link}`}>
+      <a>{item.title}</a>
+    </Link>
+    <style jsx>{`
+      a {
+        margin-right: 15px;
+      }
+      div {
+        display: inline-block;
+      }
+      `}</style>
+  </div>
+}
+
 const Header = () => (
   <div>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
+    {getHeaders().map((header) => (
+      <HeaderItem {...header} />
+    ))}
   </div>
 )
 
