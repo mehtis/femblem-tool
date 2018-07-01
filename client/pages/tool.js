@@ -10,7 +10,8 @@ const Tool = (props) => (
 
 Tool.getInitialProps = async (context) => {
   //TODO: Fetch classes
-  const res = await fetch(`http://localhost:8081/?characterName=${context.query.characterName}`)
+  const fetchedCharacter = context.query.characterName || 'Chrom'
+  const res = await fetch(`http://localhost:8081/?characterName=${fetchedCharacter}`)
   const character = await res.json()
   return {
     character
