@@ -22,15 +22,13 @@ const StatTable = (props) => {
   </table>
 }
 
-const SupportList = (props) => {
-  return <li>
-    {`${props.character}`}
-    <style jsx>{`
-      li {
-        list-style: none;
-      }
-    `}</style>
-  </li>
+const SupportSelector = (props) => {
+  return <select>
+    <option value="" defaultValue disabled hidden>Choose here</option>
+    {props.supports.map((character) =>
+      <option key={character} value={character}>{character}</option>
+    )}
+  </select>
 }
 
 class CharacterSheet extends React.Component {
@@ -51,18 +49,10 @@ class CharacterSheet extends React.Component {
         <StatTable value={this.props.growthRates} />
         <p>Max stat modifiers:</p>
         <StatTable value={this.props.maxStatModifiers} />
-        <p>Romantic supports:</p>
-        <ul>
-          {this.props.romanticSupports.map((character) => {
-            return <SupportList key={character} character={character} />
-          })}
-        </ul>
+        <p>Romantic support:</p>
+        <SupportSelector supports={this.props.romanticSupports} />
         <p>Other supports:</p>
-        <ul>
-          {this.props.otherSupports.map((character) => {
-            return <SupportList key={character} character={character} />
-          })}
-        </ul>
+        <SupportSelector supports={this.props.otherSupports} />
       </div>
     )
   }
