@@ -1,14 +1,25 @@
 import React from 'react'
 
-const HorizontalList = (value) => {
-  return <li>
-    {`${value[0]}: ${value[1]}`}
-    <style jsx>{`
-      li {
-        list-style: none;
-      }
-    `}</style>
-  </li>
+const StatTable = (props) => {
+  return <table>
+    <thead>
+      <tr>
+        {props.value.map((row) =>
+          <th key={row[0]}>
+            {row[0]}
+          </th>)}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {props.value.map((row) =>
+          <td key={row[0]}>
+            {row[1]}
+          </td>
+        )}
+      </tr>
+    </tbody>
+  </table>
 }
 
 const SupportList = (props) => {
@@ -37,17 +48,9 @@ class CharacterSheet extends React.Component {
           })}
         </ul>
         <p>Growth rates:</p>
-        <ul>
-          {this.props.growthRates.map((value) => {
-            return <HorizontalList key={value[0]} {...value} />
-          })}
-        </ul>
+        <StatTable value={this.props.growthRates} />
         <p>Max stat modifiers:</p>
-        <ul>
-          {this.props.maxStatModifiers.map((value) => {
-            return <HorizontalList key={value[0]} {...value} />
-          })}
-        </ul>
+        <StatTable value={this.props.maxStatModifiers} />
         <p>Romantic supports:</p>
         <ul>
           {this.props.romanticSupports.map((character) => {
