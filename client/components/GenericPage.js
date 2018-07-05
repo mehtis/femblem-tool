@@ -1,15 +1,18 @@
 import Header from './Header'
-//TODO: To CSS file
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-}
+
+
 
 const Layout = (props) => (
-  <div style={layoutStyle}>
+  <div className='generic-page' >
     <Header />
     {props.children}
+    <style jsx>{`
+      .generic-page {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #DDD;
+      }
+    `}</style>
   </div>
 )
 

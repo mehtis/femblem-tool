@@ -1,7 +1,8 @@
 import React from 'react'
 
+
 const StatTable = (props) => {
-  return <table>
+  return <table className='stat-table' >
     <thead>
       <tr>
         {props.value.map((row) =>
@@ -19,40 +20,51 @@ const StatTable = (props) => {
         )}
       </tr>
     </tbody>
+    <style jsx>{`
+      th, td {
+        border: 1px solid black;
+      }
+      td {
+        text-align: right;
+      }
+    `}</style>
   </table>
 }
 
-const SupportSelector = (props) => {
+const Selector = (props) => {
   return <select>
     <option value="" defaultValue disabled hidden>Choose here</option>
-    {props.supports.map((character) =>
-      <option key={character} value={character}>{character}</option>
-    )}
+    {Array.isArray(props.choices)
+      ? props.choices.map((character) =>
+        <option key={character} value={character}>{character}</option>)
+      : <option value={props.choices}>{props.choices}</option>}
   </select>
 }
 
 class CharacterSheet extends React.Component {
-
-
   render() {
     return(
       <div className='character-sheet'>
-        <h1>{`Character name: ${this.props.characterName}`}</h1>
-        <p>{`Starting class: ${this.props.startingClass}`}</p>
-        <p>Base classes:</p>
-        <ul>
-          {this.props.baseClasses.map((value) => {
-            return <li>{`${value}`}</li>
-          })}
-        </ul>
+        <p>{`Name: ${this.props.characterName}`}</p>
+        <p>{'Class:'}</p>
+        <Selector choices={this.props.startingClass} />
         <p>Growth rates:</p>
         <StatTable value={this.props.growthRates} />
         <p>Max stat modifiers:</p>
         <StatTable value={this.props.maxStatModifiers} />
-        <p>Romantic support:</p>
-        <SupportSelector supports={this.props.romanticSupports} />
-        <p>Other supports:</p>
-        <SupportSelector supports={this.props.otherSupports} />
+        <p>Spouse:</p>
+        <Selector choices={this.props.romanticSupports} />
+        <style jsx>{`
+        .character-sheet {
+          margin: 20px;
+          padding: 20px;
+          border: 1px solid #DDD;
+          display: inline-block;
+        }
+        p {
+          margin: 5px;
+        }
+        `}</style>
       </div>
     )
   }
