@@ -1,0 +1,46 @@
+{
+  "awakening": {
+    "Chrom": {
+      "characterName":"Chrom",
+      "startingClass":"Lord",
+      "baseClasses":[
+        "Cavalier",
+        "Archer"
+      ],
+      "growthRates":[
+        ["hp","85%"],
+        ["str","60%"],
+        ["mag","10%"],
+        ["skl","60%"],
+        ["spd","60%"],
+        ["lck","70%"],
+        ["def","45%"],
+        ["res","25%"]
+      ],
+      "maxStatModifiers":[
+        ["str","+1"],
+        ["mag","0"],
+        ["skl","+1"],
+        ["spd","+1"],
+        ["lck","+1"],
+        ["def","-1"],
+        ["res","-1"]
+      ],
+      "romanticSupports":[
+        "The Avatar (Female)",
+        "Sumia","Sully",
+        "Maribelle",
+        "Olivia"
+        ],
+        "otherSupports":[
+          "The Avatar (Male)",
+          "Lissa",
+          "Frederick",
+          "Vaike",
+          "Gaius",
+          "Lucina",
+          "Any of Chrom's other children"
+        ]
+    }
+  }
+}

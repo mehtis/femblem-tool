@@ -1,0 +1,54 @@
+{
+  "awakening": {
+    "Lord": {
+      "classSkills": [{
+        "name": "Dual Strike+",
+        "requirements": "Learnt at Level 1.",
+        "effects": "All units within a 3 square radius receive a 5% support bonus to Accuracy and Avoid from the user."
+        }],
+      "baseStats" :[
+        "Chrom", [
+        ["hp", "18"],
+        ["str", "6"],
+        ["mag","0"],
+        ["skl","5"],
+        ["spd","7"],
+        ["lck","0"],
+        ["def","7"],
+        ["res","0"],
+        ["mov","5"],
+        ["weaponRank", {
+          "sword": "E"
+          }]
+        ]
+      ],
+      "maxStats": [
+        "Chrom", [
+        ["hp", "60"],
+        ["str", "28"],
+        ["mag","20"],
+        ["skl","26"],
+        ["spd","27"],
+        ["lck","31"],
+        ["def","25"],
+        ["res","25"],
+        ["mov","5"],
+        ["weaponRank", {
+          "sword": "A"
+          }]
+        ]],
+      "growthRates": [
+        ["hp","40%"],
+        ["str","20%"],
+        ["mag","0%"],
+        ["skl","20%"],
+        ["spd","20%"],
+        ["lck","-"],
+        ["def","10%"],
+        ["res","5%"]],
+      "promotions": [
+        "Great Lord"
+      ]
+    }
+  }
+}
