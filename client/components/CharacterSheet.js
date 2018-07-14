@@ -47,7 +47,7 @@ class CharacterSheet extends React.Component {
       <div className='character-sheet'>
         <p>{`Name: ${this.props.characterName}`}</p>
         <p>{'Class:'}</p>
-        <Selector choices={this.props.startingClass} />
+        <Selector choices={this.props.baseClasses} />
         <p>Growth rates:</p>
         <StatTable value={this.props.growthRates} />
         <p>Max stat modifiers:</p>

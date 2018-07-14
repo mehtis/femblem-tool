@@ -29,7 +29,7 @@ const scrape = (webpage) => {
       romanticSupports: supportUnits($, 'Romantic Supports'),
       otherSupports: supportUnits($, 'Other Supports'),
     }
-
+console.log(character.baseClasses)
     if (character.characterName) {
       resolve(character)
     } else {
@@ -37,8 +37,7 @@ const scrape = (webpage) => {
     }
   })
 }
-//TODO: Fix, map doesn't work for some reason
-const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').map( () => $(this).attr('title')).toArray()
+const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text())
 
 //TODO: growthRateWithClass (e.g. Lissa)
 const growthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
