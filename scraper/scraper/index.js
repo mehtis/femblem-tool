@@ -29,7 +29,6 @@ const scrape = (webpage) => {
       romanticSupports: supportUnits($, 'Romantic Supports'),
       otherSupports: supportUnits($, 'Other Supports'),
     }
-console.log(character.baseClasses)
     if (character.characterName) {
       resolve(character)
     } else {
