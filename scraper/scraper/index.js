@@ -1,6 +1,7 @@
 const cheerio = require('cheerio')
+const rp = require('request-promise')
 
-const scrape = (webpage) => {
+const characterScrape = async (webpage) => {
   return new Promise((resolve, reject) => {
     const $ = cheerio.load(webpage)
     const character = {
@@ -36,6 +37,33 @@ const scrape = (webpage) => {
     }
   })
 }
+
+const gameScrape = async (webpage) => {
+  return await new Promise(async (resolve, reject) => {
+    const $ = cheerio.load(webpage)
+    const characterUrlEndings = $('#Playable_Characters').parent().nextUntil('h2').find('div[class=link] > a[title]').toArray().map( (name) => $(name).attr('href'))
+    try {
+      const characters = await Promise.all(characterUrlEndings.map( async (character) => {
+        const url = `http://fireemblem.wikia.com/${character}`
+        const characterPage = await rp(url)
+        return await characterScrape(characterPage)
+      }))
+      if (characters) {
+        resolve(Object.assign({}, ...characters.map(character => ({[character['characterName']]: character}))))
+      } else {
+        reject(Error('Character data not found'))
+      }
+    } catch (err) {
+      if(err.statusCode && err.statusCode === 404){
+        reject(Error('Problems loading one of the character pages'))
+      }
+      else {
+        reject(Error('Something went wrong'))
+      }
+    }
+  })
+}
+
 const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text())
 
 //TODO: growthRateWithClass (e.g. Lissa)
@@ -45,4 +73,5 @@ const statModifiers = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.s
 
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
-module.exports = scrape
+module.exports.scrapeCharacter = characterScrape
+module.exports.scrapeGame = gameScrape

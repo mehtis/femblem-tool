@@ -13,13 +13,34 @@ app.get('/', async (req, res) => {
     : 'http://fireemblem.wikia.com/wiki/Avatar_(Awakening)'
   try {
     const webpage = await rp(url)
-    const result = await scraper(webpage)
+    const result = await scraper.scrapeCharacter(webpage)
     res.send(result)
   } catch (err) {
     if (err.statusCode && err.statusCode === 404)
     {
       res.status(404)
         .send('404, Character page not found')
+    } else {
+      res.status(404)
+        .send('Error')
+    }
+  }
+})
+
+app.get('/characters', async (req, res) => {
+  const url = req.query.gameName
+    ? `http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_${req.query.gameName}`
+    : 'http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_Awakening'
+  try {
+    //TODO: rp to scraper, just give character/game name?
+    const webpage = await rp(url)
+    const result = await scraper.scrapeGame(webpage)
+    res.send(result)
+  } catch (err) {
+    if (err.statusCode && err.statusCode === 404)
+    {
+      res.status(404)
+        .send('404, Game or character page not found')
     } else {
       res.status(404)
         .send('Error')

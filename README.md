@@ -17,5 +17,7 @@ Click on 'Chrom'
 Go to `localhost:8081` in your browser
 You can use characterName as a query parameter (e.g. `http://localhost:8081/?characterName=Chrom`) to search for different characters.
 
+Search per game, e.g. `http://localhost:8081/characters?gameName=Fates`
+
 ## Attribution
 Data downloaded from http://fireemblem.wikia.com/wiki/Fire_Emblem_Wiki
