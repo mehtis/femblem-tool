@@ -5,7 +5,7 @@ const StatTable = (props) => {
   return <table className='stat-table' >
     <thead>
       <tr>
-        {props.value.map((row) =>
+        {Object.entries(props.value).map((row) =>
           <th key={row[0]}>
             {row[0]}
           </th>)}
@@ -13,7 +13,7 @@ const StatTable = (props) => {
     </thead>
     <tbody>
       <tr>
-        {props.value.map((row) =>
+        {Object.entries(props.value).map((row) =>
           <td key={row[0]}>
             {row[1]}
           </td>
