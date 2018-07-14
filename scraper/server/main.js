@@ -4,6 +4,7 @@ const scraper = require('../scraper/index')
 const morgan = require('morgan')
 
 const app = express()
+const port = 8081
 app.use(morgan('short'))
 
 app.get('/', async (req, res) => {
@@ -26,4 +27,4 @@ app.get('/', async (req, res) => {
   }
 })
 
-app.listen(8081, () => console.log('Listening on 8081')) // eslint-disable-line no-console
+app.listen(port, () => console.log(`Listening on ${port}`)) // eslint-disable-line no-console
