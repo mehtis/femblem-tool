@@ -12,7 +12,8 @@ npm run dev
 ## Usage
 ### Main app
 Go to `localhost:3000` in your browser
-Click on 'Chrom'
+Click on 'Awakening' or 'Fates'
+Type '&characterName=*name*' at the end of the url, e.g. '&characterName=Frederick' (WIP)
 ### Scraper
 Go to `localhost:8081` in your browser
 You can use characterName as a query parameter (e.g. `http://localhost:8081/?characterName=Chrom`) to search for different characters.
