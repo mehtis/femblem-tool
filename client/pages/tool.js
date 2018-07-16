@@ -10,7 +10,7 @@ const Tool = (props) => (
 
 Tool.getInitialProps = async (context) => {
   //TODO: Fetch classes
-  const game = context.query.gameName
+  const game = context.query.gameName ||'Awakening'
   const fetchedCharacter = game === 'Awakening'
     ? context.query.characterName || 'Chrom'
     : context.query.characterName || 'Ryoma'
