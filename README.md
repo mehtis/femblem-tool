@@ -2,11 +2,13 @@
 Very much WIP, let's see where we'll get to.
 
 ## Running
-``` bash
-npm run watch
-```
+Server
 ``` bash
 npm run dev
+```
+Scraper
+``` bash
+npm run watch
 ```
 
 ## Usage
