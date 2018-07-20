@@ -9,19 +9,21 @@ const getHeaders = () => {
 }
 
 const HeaderItem = (item) => {
-  return <div>
-    <Link key={item.link} href={`/${item.link}`}>
-      <a>{item.title}</a>
-    </Link>
-    <style jsx>{`
-      a {
-        margin-right: 15px;
-      }
-      div {
-        display: inline-block;
-      }
-      `}</style>
-  </div>
+  return (
+    <div>
+      <Link key={item.link} href={`/${item.link}`}>
+        <a>{item.title}</a>
+      </Link>
+      <style jsx>{`
+        a {
+          margin-right: 15px;
+        }
+        div {
+          display: inline-block;
+        }
+        `}</style>
+    </div>
+  )
 }
 
 const Header = () => (

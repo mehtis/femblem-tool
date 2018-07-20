@@ -1,11 +1,11 @@
 import GenericPage from '../components/GenericPage.js'
-import CharacterSheet from '../components/CharacterSheet'
+import Characters from '../components/Characters'
 import characters from '../static/characters.json'
 
 const Tool = (props) => (
   <GenericPage>
     <h1>{props.game}</h1>
-    <CharacterSheet {...props.character}/>
+    <Characters game={props.game}/>
   </GenericPage>
 )
 

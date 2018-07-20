@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const StatTable = (props) => {
-  return <table className='stat-table' >
+const StatTable = (props) => (
+  <table className='stat-table' >
     <thead>
       <tr>
         {Object.entries(props.value).map((row) =>
@@ -29,7 +29,7 @@ const StatTable = (props) => {
       }
     `}</style>
   </table>
-}
+)
 
 const Selector = (props) => {
   return <select>
@@ -43,27 +43,27 @@ const Selector = (props) => {
 
 class CharacterSheet extends React.Component {
   render() {
-    return(
+    return (
       <div className='character-sheet'>
-        <p>{`Name: ${this.props.characterName}`}</p>
+        <p>{`Name: ${this.props.character.characterName}`}</p>
         <p>{'Class:'}</p>
-        <Selector choices={this.props.baseClasses} />
+        <Selector choices={this.props.character.baseClasses} />
         <p>Growth rates:</p>
-        <StatTable value={this.props.growthRates} />
+        <StatTable value={this.props.character.growthRates} />
         <p>Max stat modifiers:</p>
-        <StatTable value={this.props.maxStatModifiers} />
+        <StatTable value={this.props.character.maxStatModifiers} />
         <p>Spouse:</p>
-        <Selector choices={this.props.romanticSupports} />
+        <Selector choices={this.props.character.romanticSupports} />
         <style jsx>{`
-        .character-sheet {
-          margin: 20px;
-          padding: 20px;
-          border: 1px solid #DDD;
-          display: inline-block;
-        }
-        p {
-          margin: 5px;
-        }
+          .character-sheet {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #DDD;
+            display: inline-block;
+          }
+          p {
+            margin: 5px;
+          }
         `}</style>
       </div>
     )
