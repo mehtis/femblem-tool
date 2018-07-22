@@ -8,6 +8,7 @@
     "watch": "nodemon scraper/server/main.js",
     "dev": "next client/",
     "build": "next build client/",
+    "heroku-postbuild": "next build client/",
     "start": "next start client/ -p process.env.PORT"
   },
   "author": "Niko Mehtonen",
