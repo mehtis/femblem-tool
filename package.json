@@ -1,6 +1,6 @@
 {
   "name": "fembltool",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tool for optimizing Fire Emblem character creation",
   "main": "src/server/main.js",
   "watch": {},
@@ -8,6 +8,7 @@
     "watch": "nodemon scraper/server/main.js",
     "dev": "next client/",
     "build": "next build client/",
+    "heroku-postbuild": "next build",
     "start": "next start client/"
   },
   "author": "Niko Mehtonen",
