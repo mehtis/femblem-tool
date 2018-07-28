@@ -27,10 +27,17 @@ class Characters extends React.Component {
     ]})
   }
 
+  removeCharacter = (removedId) => {
+    console.log(this)
+    this.setState({
+      characterList: this.state.characterList.filter(character => character.id !== removedId)
+      })
+  }
+
   render() {
     return (
       <div className="characters">
-        {this.state.characterList.length > 0 && this.state.characterList.map((character) => <CharacterSheet key={character.id} character={characters[character.game][character.name]} id ={character.id} />)}
+        {this.state.characterList.length > 0 && this.state.characterList.map((character) => <CharacterSheet key={character.id} character={characters[character.game][character.name]} id ={character.id} removeCharacter={this.removeCharacter} />)}
         <button className="plus-button" onClick={this.addCharacter}>
           +
         </button>

@@ -45,6 +45,9 @@ class CharacterSheet extends React.Component {
   render() {
     return (
       <div className='character-sheet'>
+      <button className='remove-button' onClick={() => this.props.removeCharacter(this.props.id)}>
+        x
+      </button>
         <p>{`Name: ${this.props.character.characterName}`}</p>
         <p>{'Class:'}</p>
         <Selector choices={this.props.character.baseClasses} />
@@ -63,6 +66,10 @@ class CharacterSheet extends React.Component {
           }
           p {
             margin: 5px;
+          }
+          .remove-button {
+            border-radius: 50%;
+            float: right;
           }
         `}</style>
       </div>
