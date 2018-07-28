@@ -13,8 +13,8 @@ class Characters extends React.Component {
     //TODO: WIP
     this.setState({characterList: [ ...this.state.characterList,
       this.props.game === 'Awakening'
-        ? {game: 'Awakening', name: 'Chrom', id: uuid()}
-        : {game: 'Fates', name: 'Ryoma', id: uuid()}
+        ? {game: 'Awakening', id: uuid()}
+        : {game: 'Fates', id: uuid()}
     ]})
   }
 
@@ -22,12 +22,12 @@ class Characters extends React.Component {
     //TODO: WIP
     this.setState({characterList: [ ...this.state.characterList,
       this.props.game === 'Awakening'
-        ? {game: 'Awakening', name: 'Chrom', id: uuid()}
-        : {game: 'Fates', name: 'Ryoma', id: uuid()}
+        ? {game: 'Awakening', id: uuid()}
+        : {game: 'Fates', id: uuid()}
     ]})
   }
 
-  removeCharacter = (removedId) => {
+  removeSheet = (removedId) => {
     this.setState({
       characterList: this.state.characterList.filter(character => character.id !== removedId)
     })
@@ -35,12 +35,12 @@ class Characters extends React.Component {
 
   render() {
     return (
-      <div className="characters">
+      <div className="characters-container">
         <button className="plus-button" onClick={this.addCharacter}>
           +
         </button>
         {this.state.characterList.length > 0 && this.state.characterList.map((character) =>
-          <CharacterSheet key={character.id} character={characters[character.game][character.name]} id ={character.id} removeCharacter={this.removeCharacter}
+          <CharacterSheet key={character.id} characters={characters[character.game]} id ={character.id} removeSheet={this.removeSheet}
           />
         )}
         <style jsx>{`

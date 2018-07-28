@@ -1,5 +1,5 @@
 # Fire Emblem Tool
-Very much WIP, let's see where we'll get to. Should be runnin on `https://femblem-tool.herokuapp.com/`.
+Very much WIP, let's see where we'll get to. Should be running on `https://femblem-tool.herokuapp.com/`.
 
 ## Running
 Server

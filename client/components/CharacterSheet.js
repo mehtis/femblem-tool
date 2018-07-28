@@ -9,7 +9,7 @@ const StatTable = (props) => (
     <table className='stat-table' >
       <thead>
         <tr>
-          {Object.entries(props.value).map((row) =>
+          {props.value && Object.entries(props.value).map((row) =>
             <th key={row[0]}>
               {row[0]}
             </th>)}
@@ -17,7 +17,7 @@ const StatTable = (props) => (
       </thead>
       <tbody>
         <tr>
-          {Object.entries(props.value).map((row) =>
+          {props.value && Object.entries(props.value).map((row) =>
             <td key={row[0]}>
               {row[1]}
             </td>
@@ -41,18 +41,20 @@ const StatTable = (props) => (
 )
 
 const Selector = (props) => {
+  //TODO: Reset selection on state change?
   return (
     <div>
       <label>
         {props.label}
       </label>
-      <select>
-        <option value="" defaultValue disabled hidden>Choose here</option>
+      {props.choices &&
+      <select onChange={props.onChange}>
+        <option disabled selected value>{`Select ${props.label.toLowerCase()}`}</option>
         {Array.isArray(props.choices)
           ? props.choices.map((item) =>
             <option key={item} value={item}>{item}</option>)
           : <option value={props.choices}>{props.choices}</option>}
-      </select>
+      </select>}
       <style jsx>{`
         label {
           margin: 5px;
@@ -63,17 +65,66 @@ const Selector = (props) => {
 }
 
 class CharacterSheet extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      character: {
+        'growthRates': {
+          'hp': '-',
+          'str': '-',
+          'mag': '-',
+          'skl': '-',
+          'spd': '-',
+          'lck': '-',
+          'def': '-',
+          'res': '-'
+        },
+        'maxStatModifiers': {
+          'str': '-',
+          'mag': '-',
+          'skl': '-',
+          'spd': '-',
+          'lck': '-',
+          'def': '-',
+          'res': '-'
+        }
+      }
+    }
+  }
+
+
+  changeCharacter = (event) => {
+    //TODO: Characters from Redux state?
+    this.setState({character: this.props.characters[event.target.value]})
+  }
+
   render() {
     return (
       <div className='character-sheet'>
-        <button className='remove-button' onClick={() => this.props.removeCharacter(this.props.id)}>
+        <button className='remove-button' onClick={() => this.props.removeSheet(this.props.id)}>
         x
         </button>
-        <p>{`Name: ${this.props.character.characterName}`}</p>
-        <Selector label="Class" choices={this.props.character.baseClasses} />
-        <StatTable label="Growth rates" value={this.props.character.growthRates} />
-        <StatTable label="Max stat modifiers" value={this.props.character.maxStatModifiers} />
-        <Selector label="Spouse" choices={this.props.character.romanticSupports} />
+        <Selector
+          label="Name"
+          choices={Object.keys(this.props.characters)}
+          onChange={this.changeCharacter}
+        />
+        <Selector
+          label="Class"
+          choices={this.state.character.baseClasses}
+        />
+        <StatTable
+          label="Growth rates"
+          value={this.state.character.growthRates}
+        />
+        <StatTable
+          label="Max stat modifiers"
+          value={this.state.character.maxStatModifiers}
+        />
+        <Selector
+          label="Spouse"
+          choices={this.state.character.romanticSupports}
+        />
         <style jsx>{`
           .character-sheet {
             margin: 20px;
