@@ -31,7 +31,7 @@ const StatTable = (props) => (
   </table>
 )
 
-const Selector = (props) => {
+const CharacterSelector = (props) => {
   return <select>
     <option value="" defaultValue disabled hidden>Choose here</option>
     {Array.isArray(props.choices)
@@ -45,18 +45,18 @@ class CharacterSheet extends React.Component {
   render() {
     return (
       <div className='character-sheet'>
-      <button className='remove-button' onClick={() => this.props.removeCharacter(this.props.id)}>
+        <button className='remove-button' onClick={() => this.props.removeCharacter(this.props.id)}>
         x
-      </button>
+        </button>
         <p>{`Name: ${this.props.character.characterName}`}</p>
         <p>{'Class:'}</p>
-        <Selector choices={this.props.character.baseClasses} />
+        <CharacterSelector choices={this.props.character.baseClasses} />
         <p>Growth rates:</p>
         <StatTable value={this.props.character.growthRates} />
         <p>Max stat modifiers:</p>
         <StatTable value={this.props.character.maxStatModifiers} />
         <p>Spouse:</p>
-        <Selector choices={this.props.character.romanticSupports} />
+        <CharacterSelector choices={this.props.character.romanticSupports} />
         <style jsx>{`
           .character-sheet {
             margin: 20px;
