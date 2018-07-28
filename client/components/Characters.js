@@ -36,17 +36,21 @@ class Characters extends React.Component {
   render() {
     return (
       <div className="characters">
-        {this.state.characterList.length > 0 && this.state.characterList.map((character) => <CharacterSheet key={character.id} character={characters[character.game][character.name]} id ={character.id} removeCharacter={this.removeCharacter} />)}
         <button className="plus-button" onClick={this.addCharacter}>
           +
         </button>
+        {this.state.characterList.length > 0 && this.state.characterList.map((character) =>
+          <CharacterSheet key={character.id} character={characters[character.game][character.name]} id ={character.id} removeCharacter={this.removeCharacter}
+          />
+        )}
         <style jsx>{`
           .plus-button {
             border-radius: 50%;
-            float: right;
+            float: left;
           }
         `}</style>
-      </div>)
+      </div>
+    )
   }
 }
 

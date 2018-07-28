@@ -31,14 +31,26 @@ const StatTable = (props) => (
   </table>
 )
 
-const CharacterSelector = (props) => {
-  return <select>
-    <option value="" defaultValue disabled hidden>Choose here</option>
-    {Array.isArray(props.choices)
-      ? props.choices.map((character) =>
-        <option key={character} value={character}>{character}</option>)
-      : <option value={props.choices}>{props.choices}</option>}
-  </select>
+const Selector = (props) => {
+  return (
+    <div>
+      <label>
+        {props.label}
+      </label>
+      <select>
+        <option value="" defaultValue disabled hidden>Choose here</option>
+        {Array.isArray(props.choices)
+          ? props.choices.map((item) =>
+            <option key={item} value={item}>{item}</option>)
+          : <option value={props.choices}>{props.choices}</option>}
+      </select>
+      <style jsx>{`
+        label {
+          margin-right: 5px;
+        }
+      `}</style>
+    </div>
+  )
 }
 
 class CharacterSheet extends React.Component {
@@ -49,14 +61,12 @@ class CharacterSheet extends React.Component {
         x
         </button>
         <p>{`Name: ${this.props.character.characterName}`}</p>
-        <p>{'Class:'}</p>
-        <CharacterSelector choices={this.props.character.baseClasses} />
+        <Selector label="Class" choices={this.props.character.baseClasses} />
         <p>Growth rates:</p>
         <StatTable value={this.props.character.growthRates} />
         <p>Max stat modifiers:</p>
         <StatTable value={this.props.character.maxStatModifiers} />
-        <p>Spouse:</p>
-        <CharacterSelector choices={this.props.character.romanticSupports} />
+        <Selector label="Spouse" choices={this.props.character.romanticSupports} />
         <style jsx>{`
           .character-sheet {
             margin: 20px;
