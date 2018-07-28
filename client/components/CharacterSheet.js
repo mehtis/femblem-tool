@@ -2,24 +2,29 @@ import React from 'react'
 
 
 const StatTable = (props) => (
-  <table className='stat-table' >
-    <thead>
-      <tr>
-        {Object.entries(props.value).map((row) =>
-          <th key={row[0]}>
-            {row[0]}
-          </th>)}
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        {Object.entries(props.value).map((row) =>
-          <td key={row[0]}>
-            {row[1]}
-          </td>
-        )}
-      </tr>
-    </tbody>
+  <div>
+    <label>
+      {props.label}
+    </label>
+    <table className='stat-table' >
+      <thead>
+        <tr>
+          {Object.entries(props.value).map((row) =>
+            <th key={row[0]}>
+              {row[0]}
+            </th>)}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {Object.entries(props.value).map((row) =>
+            <td key={row[0]}>
+              {row[1]}
+            </td>
+          )}
+        </tr>
+      </tbody>
+    </table>
     <style jsx>{`
       th, td {
         border: 1px solid black;
@@ -27,8 +32,12 @@ const StatTable = (props) => (
       td {
         text-align: right;
       }
+
+      label {
+        margin: 5px;
+      }
     `}</style>
-  </table>
+  </div>
 )
 
 const Selector = (props) => {
@@ -46,7 +55,7 @@ const Selector = (props) => {
       </select>
       <style jsx>{`
         label {
-          margin-right: 5px;
+          margin: 5px;
         }
       `}</style>
     </div>
@@ -62,10 +71,8 @@ class CharacterSheet extends React.Component {
         </button>
         <p>{`Name: ${this.props.character.characterName}`}</p>
         <Selector label="Class" choices={this.props.character.baseClasses} />
-        <p>Growth rates:</p>
-        <StatTable value={this.props.character.growthRates} />
-        <p>Max stat modifiers:</p>
-        <StatTable value={this.props.character.maxStatModifiers} />
+        <StatTable label="Growth rates" value={this.props.character.growthRates} />
+        <StatTable label="Max stat modifiers" value={this.props.character.maxStatModifiers} />
         <Selector label="Spouse" choices={this.props.character.romanticSupports} />
         <style jsx>{`
           .character-sheet {
