@@ -28,7 +28,6 @@ class Characters extends React.Component {
   }
 
   removeCharacter = (removedId) => {
-    console.log(this)
     this.setState({
       characterList: this.state.characterList.filter(character => character.id !== removedId)
       })
