@@ -3,8 +3,7 @@
     "Lord": {
       "classSkills": [{
         "name": "Dual Strike+",
-        "requirements": "Learnt at Level 1.",
-        "effects": "All units within a 3 square radius receive a 5% support bonus to Accuracy and Avoid from the user."
+        "requirements": "Learnt at Level 1."
         }]
     }
   }

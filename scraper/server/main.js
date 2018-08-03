@@ -1,7 +1,8 @@
 const express = require('express')
 const rp = require('request-promise')
-const scraper = require('../scraper/index')
 const morgan = require('morgan')
+
+const scraper = require('../scraper/index')
 
 const app = express()
 const port = 8081
@@ -41,6 +42,29 @@ app.get('/characters', async (req, res) => {
     {
       res.status(404)
         .send('404, Game or character page not found')
+    } else {
+      res.status(404)
+        .send('Error')
+    }
+  }
+})
+
+app.get('/class', async (req, res) => {
+  const url = req.query.className
+    ? `http://fireemblem.wikia.com/wiki/${req.query.className}`
+    : 'http://fireemblem.wikia.com/wiki/Lord'
+  const game = req.query.gameName === 'Awakening'
+    ? 'FE13'
+    : 'FE14'
+  try {
+    const webpage = await rp(url)
+    const result = await scraper.scrapeClass(webpage, game)
+    res.send(result)
+  } catch (err) {
+    if (err.statusCode && err.statusCode === 404)
+    {
+      res.status(404)
+        .send('404, Class page not found')
     } else {
       res.status(404)
         .send('Error')

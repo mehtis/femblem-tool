@@ -4,19 +4,19 @@ const rp = require('request-promise')
 const characterScrape = async (webpage) => {
   return new Promise((resolve, reject) => {
     const $ = cheerio.load(webpage)
-    const character = {
+    const characterStats = {
       characterName: $('.pi-title').text(),
       startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
       baseClasses: baseClasses($),
       growthRates: {
-        'hp':  growthRate($, 1),
-        'str':  growthRate($, 2),
-        'mag':  growthRate($, 3),
-        'skl':  growthRate($, 4),
-        'spd':  growthRate($, 5),
-        'lck':  growthRate($, 6),
-        'def':  growthRate($, 7),
-        'res':  growthRate($, 8),
+        'hp':  characterGrowthRate($, 1),
+        'str':  characterGrowthRate($, 2),
+        'mag':  characterGrowthRate($, 3),
+        'skl':  characterGrowthRate($, 4),
+        'spd':  characterGrowthRate($, 5),
+        'lck':  characterGrowthRate($, 6),
+        'def':  characterGrowthRate($, 7),
+        'res':  characterGrowthRate($, 8),
       },
       maxStatModifiers: {
         'str':  statModifiers($, 1),
@@ -30,8 +30,8 @@ const characterScrape = async (webpage) => {
       romanticSupports: supportUnits($, 'Romantic Supports'),
       otherSupports: supportUnits($, 'Other Supports'),
     }
-    if (character.characterName) {
-      resolve(character)
+    if (characterStats.characterName) {
+      resolve(characterStats)
     } else {
       reject(Error('Character data not found'))
     }
@@ -67,11 +67,37 @@ const gameScrape = async (webpage) => {
 const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text())
 
 //TODO: growthRateWithClass (e.g. Lissa)
-const growthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+const characterGrowthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
 const statModifiers = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
+const scrapeClass = async (webpage, game) => {
+  return new Promise ((resolve, reject) => {
+    const $ = cheerio.load(webpage)
+    const classStats = {
+      className: $('.pi-title').text(),
+      baseStats: [{}],
+      maxStats: [{}],
+      growthRates: [{}],
+      classSkills: [{
+        skillName: '',
+        requirements: ''
+      }],
+      promotions: {
+        method: '',
+        classes: []
+      }
+    }
+    if (classStats.className) {
+      resolve(classStats)
+    } else {
+      reject(Error('Class data not found'))
+    }
+  })
+}
+
 module.exports.scrapeCharacter = characterScrape
+module.exports.scrapeClass = scrapeClass
 module.exports.scrapeGame = gameScrape

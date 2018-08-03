@@ -20,7 +20,9 @@ Type '&characterName=*name*' at the end of the url, e.g. '&characterName=Frederi
 Go to `localhost:8081` in your browser
 You can use characterName as a query parameter (e.g. `http://localhost:8081/?characterName=Chrom`) to search for different characters.
 
-Search per game, e.g. `http://localhost:8081/characters?gameName=Fates`
+For classes, `http://localhost:8081/class?className=Lord&gameName=Awakening`
+
+Search for characters per game, e.g. `http://localhost:8081/characters?gameName=Fates`
 
 ## Attribution
 Data downloaded from http://fireemblem.wikia.com/wiki/Fire_Emblem_Wiki
