@@ -9,7 +9,7 @@ const characterScrape = async (webpage) => {
       startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
       baseClasses: baseClasses($),
       growthRates: {
-        'hp':  characterStat($, 1, '#Growth_Rates'),
+        'hp':   characterStat($, 1, '#Growth_Rates'),
         'str':  characterStat($, 2, '#Growth_Rates'),
         'mag':  characterStat($, 3, '#Growth_Rates'),
         'skl':  characterStat($, 4, '#Growth_Rates'),
@@ -77,17 +77,39 @@ const scrapeClass = async (webpage, game) => {
     const classStats = {
       className: $('.pi-title').text(),
       baseStats: [{
-        'hp':  baseStat($, 0, game),
-        'str':  baseStat($, 1, game),
-        'mag':  baseStat($, 2, game),
-        'skl':  baseStat($, 3, game),
-        'spd':  baseStat($, 4, game),
-        'lck':  baseStat($, 5, game),
-        'def':  baseStat($, 6, game),
-        'res':  baseStat($, 7, game),
+        'hp':   classStat($, 0, '#Base_Stats', game),
+        'str':  classStat($, 1, '#Base_Stats', game),
+        'mag':  classStat($, 2, '#Base_Stats', game),
+        'skl':  classStat($, 3, '#Base_Stats', game),
+        'spd':  classStat($, 4, '#Base_Stats', game),
+        'lck':  classStat($, 5, '#Base_Stats', game),
+        'def':  classStat($, 6, '#Base_Stats', game),
+        'res':  classStat($, 7, '#Base_Stats', game),
+        'mov':  classStat($, 8, '#Base_Stats', game),
+        'weapons': [], //TODO: <-
       }],
-      maxStats: [{}],
-      growthRates: [{}],
+      maxStats: [{
+        'hp':   classStat($, 0, '#Maximum_Stats', game),
+        'str':  classStat($, 1, '#Maximum_Stats', game),
+        'mag':  classStat($, 2, '#Maximum_Stats', game),
+        'skl':  classStat($, 3, '#Maximum_Stats', game),
+        'spd':  classStat($, 4, '#Maximum_Stats', game),
+        'lck':  classStat($, 5, '#Maximum_Stats', game),
+        'def':  classStat($, 6, '#Maximum_Stats', game),
+        'res':  classStat($, 7, '#Maximum_Stats', game),
+        'mov':  classStat($, 8, '#Maximum_Stats', game),
+        'weapons': [], //TODO: <-
+      }],
+      growthRates: [{
+        'hp':   classStat($, 0, '#Growth_Rates', game),
+        'str':  classStat($, 1, '#Growth_Rates', game),
+        'mag':  classStat($, 2, '#Growth_Rates', game),
+        'skl':  classStat($, 3, '#Growth_Rates', game),
+        'spd':  classStat($, 4, '#Growth_Rates', game),
+        'lck':  classStat($, 5, '#Growth_Rates', game),
+        'def':  classStat($, 6, '#Growth_Rates', game),
+        'res':  classStat($, 7, '#Growth_Rates', game),
+      }],
       classSkills: [{
         skillName: '',
         requirements: ''
@@ -105,7 +127,7 @@ const scrapeClass = async (webpage, game) => {
   })
 }
 
-const baseStat = ($, index, game) => $('#Base_Stats').parent().nextAll('.wikitable').first().find('tr > td > b')
+const classStat = ($, index, stat, game) => $(stat).parent().nextAll('.wikitable').first().find('tr > td > b')
   .filter((i, el) => $(el).text() === game)
   .parent().siblings().eq(index).text().trim()
 
