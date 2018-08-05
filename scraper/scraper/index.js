@@ -9,23 +9,23 @@ const characterScrape = async (webpage) => {
       startingClass: $('#Base_Stats').parent().nextAll('.statbox').find('td').first().find('a').last().text(),
       baseClasses: baseClasses($),
       growthRates: {
-        'hp':  characterGrowthRate($, 1),
-        'str':  characterGrowthRate($, 2),
-        'mag':  characterGrowthRate($, 3),
-        'skl':  characterGrowthRate($, 4),
-        'spd':  characterGrowthRate($, 5),
-        'lck':  characterGrowthRate($, 6),
-        'def':  characterGrowthRate($, 7),
-        'res':  characterGrowthRate($, 8),
+        'hp':  characterStat($, 1, '#Growth_Rates'),
+        'str':  characterStat($, 2, '#Growth_Rates'),
+        'mag':  characterStat($, 3, '#Growth_Rates'),
+        'skl':  characterStat($, 4, '#Growth_Rates'),
+        'spd':  characterStat($, 5, '#Growth_Rates'),
+        'lck':  characterStat($, 6, '#Growth_Rates'),
+        'def':  characterStat($, 7, '#Growth_Rates'),
+        'res':  characterStat($, 8, '#Growth_Rates'),
       },
       maxStatModifiers: {
-        'str':  statModifier($, 1),
-        'mag':  statModifier($, 2),
-        'skl':  statModifier($, 3),
-        'spd':  statModifier($, 4),
-        'lck':  statModifier($, 5),
-        'def':  statModifier($, 6),
-        'res':  statModifier($, 7),
+        'str':  characterStat($, 1, '#Max_Stat_Modifers'),
+        'mag':  characterStat($, 2, '#Max_Stat_Modifers'),
+        'skl':  characterStat($, 3, '#Max_Stat_Modifers'),
+        'spd':  characterStat($, 4, '#Max_Stat_Modifers'),
+        'lck':  characterStat($, 5, '#Max_Stat_Modifers'),
+        'def':  characterStat($, 6, '#Max_Stat_Modifers'),
+        'res':  characterStat($, 7, '#Max_Stat_Modifers'),
       },
       romanticSupports: supportUnits($, 'Romantic Supports'),
       otherSupports: supportUnits($, 'Other Supports'),
@@ -67,9 +67,7 @@ const gameScrape = async (webpage) => {
 const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text().trim())
 
 //TODO: growthRateWithClass (e.g. Lissa)
-const characterGrowthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
-
-const statModifier = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+const characterStat = ($, index, stat) => $(stat).parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
