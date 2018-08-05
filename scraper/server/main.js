@@ -52,7 +52,7 @@ app.get('/characters', async (req, res) => {
 app.get('/class', async (req, res) => {
   const url = req.query.className
     ? `http://fireemblem.wikia.com/wiki/${req.query.className}`
-    : 'http://fireemblem.wikia.com/wiki/Lord'
+    : 'http://fireemblem.wikia.com/wiki/Cavalier'
   const game = req.query.gameName === 'Awakening'
     ? 'FE13'
     : 'FE14'

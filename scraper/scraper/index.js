@@ -19,13 +19,13 @@ const characterScrape = async (webpage) => {
         'res':  characterGrowthRate($, 8),
       },
       maxStatModifiers: {
-        'str':  statModifiers($, 1),
-        'mag':  statModifiers($, 2),
-        'skl':  statModifiers($, 3),
-        'spd':  statModifiers($, 4),
-        'lck':  statModifiers($, 5),
-        'def':  statModifiers($, 6),
-        'res':  statModifiers($, 7),
+        'str':  statModifier($, 1),
+        'mag':  statModifier($, 2),
+        'skl':  statModifier($, 3),
+        'spd':  statModifier($, 4),
+        'lck':  statModifier($, 5),
+        'def':  statModifier($, 6),
+        'res':  statModifier($, 7),
       },
       romanticSupports: supportUnits($, 'Romantic Supports'),
       otherSupports: supportUnits($, 'Other Supports'),
@@ -64,12 +64,12 @@ const gameScrape = async (webpage) => {
   })
 }
 
-const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text())
+const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text().trim())
 
 //TODO: growthRateWithClass (e.g. Lissa)
 const characterGrowthRate = ($, index) => $('#Growth_Rates').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
-const statModifiers = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
+const statModifier = ($, index) => $('#Max_Stat_Modifers').parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
 
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
@@ -78,7 +78,16 @@ const scrapeClass = async (webpage, game) => {
     const $ = cheerio.load(webpage)
     const classStats = {
       className: $('.pi-title').text(),
-      baseStats: [{}],
+      baseStats: [{
+        'hp':  baseStat($, 0, game),
+        'str':  baseStat($, 1, game),
+        'mag':  baseStat($, 2, game),
+        'skl':  baseStat($, 3, game),
+        'spd':  baseStat($, 4, game),
+        'lck':  baseStat($, 5, game),
+        'def':  baseStat($, 6, game),
+        'res':  baseStat($, 7, game),
+      }],
       maxStats: [{}],
       growthRates: [{}],
       classSkills: [{
@@ -97,6 +106,10 @@ const scrapeClass = async (webpage, game) => {
     }
   })
 }
+
+const baseStat = ($, index, game) => $('#Base_Stats').parent().nextAll('.wikitable').first().find('tr > td > b')
+  .filter((i, el) => $(el).text() === game)
+  .parent().siblings().eq(index).text().trim()
 
 module.exports.scrapeCharacter = characterScrape
 module.exports.scrapeClass = scrapeClass
