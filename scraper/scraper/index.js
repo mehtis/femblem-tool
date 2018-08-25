@@ -76,7 +76,7 @@ const scrapeClass = async (webpage, game) => {
     const $ = cheerio.load(webpage)
     const classStats = {
       className: $('.pi-title').text(),
-      baseStats: [{
+      baseStats: {
         'hp':   classStat($, 0, '#Base_Stats', game),
         'str':  classStat($, 1, '#Base_Stats', game),
         'mag':  classStat($, 2, '#Base_Stats', game),
@@ -87,8 +87,8 @@ const scrapeClass = async (webpage, game) => {
         'res':  classStat($, 7, '#Base_Stats', game),
         'mov':  classStat($, 8, '#Base_Stats', game),
         'weapons': classWeapons($, '#Base_Stats', game),
-      }],
-      maxStats: [{
+      },
+      maxStats: {
         'hp':   classStat($, 0, '#Maximum_Stats', game),
         'str':  classStat($, 1, '#Maximum_Stats', game),
         'mag':  classStat($, 2, '#Maximum_Stats', game),
@@ -99,8 +99,8 @@ const scrapeClass = async (webpage, game) => {
         'res':  classStat($, 7, '#Maximum_Stats', game),
         'mov':  classStat($, 8, '#Maximum_Stats', game),
         'weapons': classWeapons($, '#Maximum_Stats', game),
-      }],
-      growthRates: [{
+      },
+      growthRates: {
         'hp':   classStat($, 0, '#Growth_Rates', game),
         'str':  classStat($, 1, '#Growth_Rates', game),
         'mag':  classStat($, 2, '#Growth_Rates', game),
@@ -109,7 +109,7 @@ const scrapeClass = async (webpage, game) => {
         'lck':  classStat($, 5, '#Growth_Rates', game),
         'def':  classStat($, 6, '#Growth_Rates', game),
         'res':  classStat($, 7, '#Growth_Rates', game),
-      }],
+      },
       //TODO: Skill effect, refactor to objects instead of arrays
       classSkills: classSkills($, game),
       promotions: classPromotions($,game),
