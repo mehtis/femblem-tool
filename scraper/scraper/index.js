@@ -110,10 +110,7 @@ const scrapeClass = async (webpage, game) => {
         'def':  classStat($, 6, '#Growth_Rates', game),
         'res':  classStat($, 7, '#Growth_Rates', game),
       }],
-      classSkills: [{
-        skillName: '',
-        requirements: ''
-      }],
+      classSkills: classSkills($, game),
       promotions: {
         method: '',
         classes: []
@@ -127,17 +124,30 @@ const scrapeClass = async (webpage, game) => {
   })
 }
 
-const classStat = ($, index, stat, game) => $(stat).parent().nextAll('.wikitable').first().find('tr > td > b')
+const classStat = ($, index, stat, game) => $(stat).parent().nextAll('.wikitable').first()
+  .find('tr > td > b')
   .filter( (i, el) => $(el).text() === game)
   .parent().siblings().eq(index).text().trim()
 
-const classWeapons = ($, stat, game) => $(stat).parent().nextAll('.wikitable').first().find('tr > td > b')
+const classWeapons = ($, stat, game) => $(stat).parent().nextAll('.wikitable').first()
+  .find('tr > td > b')
   .filter( (i, el) => $(el).text() === game)
   .parent().siblings().last().children()
   .map((i, el) =>
     [{ 'weapon': $(el).attr('title'),
       'rank': el.next.data.trim() }]
   ).toArray()
+
+const classSkills = ($, game) => $('#Class_Skills').parent().nextAll('.wikitable').first()
+  .find('tr > td > b')
+  .filter( (i, el) => $(el).text() === game).parent().siblings().first().children()
+  .map((i, el) =>
+    i % 3 === 1
+      ? { 'skillName': $(el).text(),
+        'requirements': el.parent.next.children[(i+2)/3*2-2].data.trim(),
+      } : null
+  ).toArray()
+
 
 module.exports.scrapeCharacter = characterScrape
 module.exports.scrapeClass = scrapeClass
