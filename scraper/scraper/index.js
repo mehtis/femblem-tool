@@ -110,11 +110,9 @@ const scrapeClass = async (webpage, game) => {
         'def':  classStat($, 6, '#Growth_Rates', game),
         'res':  classStat($, 7, '#Growth_Rates', game),
       }],
+      //TODO: Skill effect, refactor to objects instead of arrays
       classSkills: classSkills($, game),
-      promotions: {
-        method: '',
-        classes: []
-      }
+      promotions: classPromotions($,game),
     }
     if (classStats.className) {
       resolve(classStats)
@@ -134,7 +132,8 @@ const classWeapons = ($, stat, game) => $(stat).parent().nextAll('.wikitable').f
   .filter( (i, el) => $(el).text() === game)
   .parent().siblings().last().children()
   .map((i, el) =>
-    [{ 'weapon': $(el).attr('title'),
+    [{
+      'weapon': $(el).attr('title'),
       'rank': el.next.data.trim() }]
   ).toArray()
 
@@ -143,9 +142,25 @@ const classSkills = ($, game) => $('#Class_Skills').parent().nextAll('.wikitable
   .filter( (i, el) => $(el).text() === game).parent().siblings().first().children()
   .map((i, el) =>
     i % 3 === 1
-      ? { 'skillName': $(el).text(),
-        'requirements': el.parent.next.children[(i+2)/3*2-2].data.trim(),
+      ? {
+        skillName: $(el).text(),
+        requirements: el.parent.next.children[(i+2)/3*2-2].data.trim(),
       } : null
+  ).toArray()
+
+const classPromotions = ($, game) => $('#Promotions').parent().nextAll('.wikitable').first()
+  .find('tr > td > b')
+  .filter( (i, el) => $(el).text() === game).parent().siblings().first()
+  .map((i, el) =>
+    [{
+      method: $(el).next().children().remove('.image').parent().text(),
+      classNames:$(el).next().next().children()
+        .map((i, el) =>
+          i % 3 === 1
+            ? $(el).text()
+            : null
+        ).toArray()
+    }]
   ).toArray()
 
 
