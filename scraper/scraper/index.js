@@ -55,7 +55,7 @@ const gameScrape = async (webpage) => {
       }
     } catch (err) {
       if (err.statusCode && err.statusCode === 404) {
-        reject(Error(`Problem loading character page ${url}`))
+        reject(Error('Problem loading character page'))
       }
       else {
         reject(Error('Something went wrong'))
@@ -140,7 +140,7 @@ const classWeapons = ($, stat, gameNumber) => $(classCrawl($, stat, gameNumber))
       'rank': el.next.data.trim() }]
   ).toArray()
 
-const classSkills = ($, stat, gameNumber, gameName) => $(classCrawl($, stat, gameNumber)).first().children()
+const classSkills = ($, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).first().children()
   .map((i, el) =>
     i % 3 === 1
       ? {
