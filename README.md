@@ -15,7 +15,7 @@ npm run watch
 ### Main app
 Go to `localhost:3000` in your browser
 Click on 'Awakening' or 'Fates'
-Type '&characterName=*name*' at the end of the url, e.g. '&characterName=Frederick' (WIP)
+Select character from dropdown. Press + to add new characters.
 ### Scraper
 Go to `localhost:8081` in your browser
 You can use characterName as a query parameter (e.g. `http://localhost:8081/?characterName=Chrom`) to search for different characters.
