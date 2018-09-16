@@ -54,8 +54,8 @@ const gameScrape = async (webpage) => {
         reject(Error('Character data not found'))
       }
     } catch (err) {
-      if(err.statusCode && err.statusCode === 404){
-        reject(Error('Problems loading one of the character pages'))
+      if (err.statusCode && err.statusCode === 404) {
+        reject(Error(`Problem loading character page ${url}`))
       }
       else {
         reject(Error('Something went wrong'))
@@ -71,50 +71,50 @@ const characterStat = ($, index, stat) => $(stat).parent().nextAll('.statbox').f
 
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
-const scrapeClass = async (webpage, game) => {
-  return new Promise ((resolve, reject) => {
+const scrapeClass = async (webpage, gameNumber, gameName) => {
+  return new Promise ( async (resolve, reject) => {
     const $ = cheerio.load(webpage)
     const classStats = {
       className: $('.pi-title').text(),
       baseStats: {
-        'hp':   classStat($, 0, '#Base_Stats', game),
-        'str':  classStat($, 1, '#Base_Stats', game),
-        'mag':  classStat($, 2, '#Base_Stats', game),
-        'skl':  classStat($, 3, '#Base_Stats', game),
-        'spd':  classStat($, 4, '#Base_Stats', game),
-        'lck':  classStat($, 5, '#Base_Stats', game),
-        'def':  classStat($, 6, '#Base_Stats', game),
-        'res':  classStat($, 7, '#Base_Stats', game),
-        'mov':  classStat($, 8, '#Base_Stats', game),
-        'weapons': classWeapons($, '#Base_Stats', game),
+        'hp':   classStat($, 0, '#Base_Stats', gameNumber),
+        'str':  classStat($, 1, '#Base_Stats', gameNumber),
+        'mag':  classStat($, 2, '#Base_Stats', gameNumber),
+        'skl':  classStat($, 3, '#Base_Stats', gameNumber),
+        'spd':  classStat($, 4, '#Base_Stats', gameNumber),
+        'lck':  classStat($, 5, '#Base_Stats', gameNumber),
+        'def':  classStat($, 6, '#Base_Stats', gameNumber),
+        'res':  classStat($, 7, '#Base_Stats', gameNumber),
+        'mov':  classStat($, 8, '#Base_Stats', gameNumber),
+        'weapons': classWeapons($, '#Base_Stats', gameNumber),
       },
       maxStats: {
-        'hp':   classStat($, 0, '#Maximum_Stats', game),
-        'str':  classStat($, 1, '#Maximum_Stats', game),
-        'mag':  classStat($, 2, '#Maximum_Stats', game),
-        'skl':  classStat($, 3, '#Maximum_Stats', game),
-        'spd':  classStat($, 4, '#Maximum_Stats', game),
-        'lck':  classStat($, 5, '#Maximum_Stats', game),
-        'def':  classStat($, 6, '#Maximum_Stats', game),
-        'res':  classStat($, 7, '#Maximum_Stats', game),
-        'mov':  classStat($, 8, '#Maximum_Stats', game),
-        'weapons': classWeapons($, '#Maximum_Stats', game),
+        'hp':   classStat($, 0, '#Maximum_Stats', gameNumber),
+        'str':  classStat($, 1, '#Maximum_Stats', gameNumber),
+        'mag':  classStat($, 2, '#Maximum_Stats', gameNumber),
+        'skl':  classStat($, 3, '#Maximum_Stats', gameNumber),
+        'spd':  classStat($, 4, '#Maximum_Stats', gameNumber),
+        'lck':  classStat($, 5, '#Maximum_Stats', gameNumber),
+        'def':  classStat($, 6, '#Maximum_Stats', gameNumber),
+        'res':  classStat($, 7, '#Maximum_Stats', gameNumber),
+        'mov':  classStat($, 8, '#Maximum_Stats', gameNumber),
+        'weapons': classWeapons($, '#Maximum_Stats', gameNumber),
       },
       growthRates: {
-        'hp':   classStat($, 0, '#Growth_Rates', game),
-        'str':  classStat($, 1, '#Growth_Rates', game),
-        'mag':  classStat($, 2, '#Growth_Rates', game),
-        'skl':  classStat($, 3, '#Growth_Rates', game),
-        'spd':  classStat($, 4, '#Growth_Rates', game),
-        'lck':  classStat($, 5, '#Growth_Rates', game),
-        'def':  classStat($, 6, '#Growth_Rates', game),
-        'res':  classStat($, 7, '#Growth_Rates', game),
+        'hp':   classStat($, 0, '#Growth_Rates', gameNumber),
+        'str':  classStat($, 1, '#Growth_Rates', gameNumber),
+        'mag':  classStat($, 2, '#Growth_Rates', gameNumber),
+        'skl':  classStat($, 3, '#Growth_Rates', gameNumber),
+        'spd':  classStat($, 4, '#Growth_Rates', gameNumber),
+        'lck':  classStat($, 5, '#Growth_Rates', gameNumber),
+        'def':  classStat($, 6, '#Growth_Rates', gameNumber),
+        'res':  classStat($, 7, '#Growth_Rates', gameNumber),
       },
       //TODO: Skill effect
-      classSkills: classSkills($, '#Class_Skills', game),
+      classSkills: classSkills($, '#Class_Skills', gameNumber, gameName),
       promotions: {
-        method: classPromotionMethod($, '#Promotions', game),
-        classNames: classPromotionNames($, '#Promotions', game),
+        method: classPromotionMethod($, '#Promotions', gameNumber),
+        classNames: classPromotionNames($, '#Promotions', gameNumber),
       },
     }
 
@@ -126,21 +126,21 @@ const scrapeClass = async (webpage, game) => {
   })
 }
 
-const classCrawl = ($, stat, game) => $(stat).parent().nextAll('.wikitable').first()
+const classCrawl = ($, stat, gameNumber) => $(stat).parent().nextAll('.wikitable').first()
   .find('tr > td > b')
-  .filter( (i, el) => $(el).text() === game)
+  .filter( (i, el) => $(el).text() === gameNumber)
   .parent().siblings()
 
-const classStat = ($, index, stat, game) => $(classCrawl($, stat, game)).eq(index).text().trim()
+const classStat = ($, index, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).eq(index).text().trim()
 
-const classWeapons = ($, stat, game) => $(classCrawl($, stat, game)).last().children()
+const classWeapons = ($, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).last().children()
   .map((i, el) =>
     [{
       'weapon': $(el).attr('title'),
       'rank': el.next.data.trim() }]
   ).toArray()
 
-const classSkills = ($, stat, game) => $(classCrawl($, stat, game)).first().children()
+const classSkills = ($, stat, gameNumber, gameName) => $(classCrawl($, stat, gameNumber)).first().children()
   .map((i, el) =>
     i % 3 === 1
       ? {
@@ -149,9 +149,9 @@ const classSkills = ($, stat, game) => $(classCrawl($, stat, game)).first().chil
       } : null
   ).toArray()
 
-const classPromotionMethod = ($, stat, game) =>  $(classCrawl($, stat, game)).first().next().children().remove('.image').parent().text()
+const classPromotionMethod = ($, stat, gameNumber) =>  $(classCrawl($, stat, gameNumber)).first().next().children().remove('.image').parent().text()
 
-const classPromotionNames = ($, stat, game) =>  $(classCrawl($, stat, game)).first().next().next().children()
+const classPromotionNames = ($, stat, gameNumber) =>  $(classCrawl($, stat, gameNumber)).first().next().next().children()
   .map((i, el) =>
     i % 3 === 1
       ? $(el).text()
