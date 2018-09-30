@@ -1,7 +1,7 @@
 const cheerio = require('cheerio')
 const rp = require('request-promise')
 
-const characterScrape = async (webpage) => {
+const scrapeCharacter = async (webpage) => {
   return new Promise((resolve, reject) => {
     const $ = cheerio.load(webpage)
     const characterStats = {
@@ -38,15 +38,16 @@ const characterScrape = async (webpage) => {
   })
 }
 
-const gameScrape = async (webpage) => {
-  return await new Promise(async (resolve, reject) => {
+const scrapeGameForCharacters = async (webpage) => {
+  return new Promise(async (resolve, reject) => {
     const $ = cheerio.load(webpage)
+    //TODO: Working with Fates classpage
     const characterUrlEndings = $('#Playable_Characters').parent().nextUntil('h2').find('div[class=link] > a[title]').toArray().map( (name) => $(name).attr('href'))
     try {
-      const characters = await Promise.all(characterUrlEndings.map( async (character) => {
+      const characters = await Promise.all(characterUrlEndings.map(async (character) => {
         const url = `http://fireemblem.wikia.com/${character}`
         const characterPage = await rp(url)
-        return await characterScrape(characterPage)
+        return await scrapeCharacter(characterPage)
       }))
       if (characters) {
         resolve(Object.assign({}, ...characters.map(character => ({[character['characterName']]: character}))))
@@ -72,7 +73,7 @@ const characterStat = ($, index, stat) => $(stat).parent().nextAll('.statbox').f
 const supportUnits = ($, type) => $('#Supports').parent().nextAll('p').children(`b:contains('${type}')`).parent().nextAll('ul').first().text().split('\n').slice(0, -1)
 
 const scrapeClass = async (webpage, gameNumber, gameName) => {
-  return new Promise ( async (resolve, reject) => {
+  return new Promise ((resolve, reject) => {
     const $ = cheerio.load(webpage)
     const classStats = {
       className: $('.pi-title').text(),
@@ -117,7 +118,7 @@ const scrapeClass = async (webpage, gameNumber, gameName) => {
         classNames: classPromotionNames($, '#Promotions', gameNumber),
       },
     }
-
+    console.log(classStats)
     if (classStats.className) {
       resolve(classStats)
     } else {
@@ -158,6 +159,33 @@ const classPromotionNames = ($, stat, gameNumber) =>  $(classCrawl($, stat, game
       : null
   ).toArray()
 
-module.exports.scrapeCharacter = characterScrape
+const scrapeGameForClasses = async (webpage, gameNumber) => {
+  return new Promise(async (resolve, reject) => {
+    const $ = cheerio.load(webpage)
+    const classUrlEndings = $('#Playable_Classes').parent().next().find('tbody').children().nextAll().map((i, el) => ($(el).children().first().next().children().attr('href'))).toArray()
+    try {
+      const classes = await Promise.all(classUrlEndings.map(async (classUrls) => {
+        const url = `http://fireemblem.wikia.com/${classUrls}`
+        const classPage = await rp(url)
+        return await scrapeClass(classPage, gameNumber)
+      }))
+      if (classes) {
+        resolve(Object.assign({}, ...classes.map(classStats => ({[classStats['className']]: classStats}))))
+      } else {
+        reject(Error('Class data not found'))
+      }
+    } catch (err) {
+      if (err.statusCode && err.statusCode === 404) {
+        reject(Error('Problem loading class page'))
+      }
+      else {
+        reject(Error('Something went wrong'))
+      }
+    }
+  })
+}
+
+module.exports.scrapeCharacter = scrapeCharacter
 module.exports.scrapeClass = scrapeClass
-module.exports.scrapeGame = gameScrape
+module.exports.scrapeGameForCharacters = scrapeGameForCharacters
+module.exports.scrapeGameForClasses = scrapeGameForClasses

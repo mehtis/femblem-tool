@@ -1,10 +1,2494 @@
 {
   "awakening": {
     "Lord": {
-      "classSkills": [{
-        "name": "Dual Strike+",
-        "requirements": "Learnt at Level 1."
+      "className": "Lord",
+      "baseStats": {
+        "hp": "18",
+        "str": "6",
+        "mag": "0",
+        "skl": "5",
+        "spd": "7",
+        "lck": "4",
+        "def": "7",
+        "res": "0",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
         }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "33",
+        "mag": "25",
+        "skl": "30",
+        "spd": "31",
+        "lck": "34",
+        "def": "32",
+        "res": "29",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "15%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "5%",
+        "spd": "20%",
+        "lck": "10%",
+        "def": "15%",
+        "res": "0%"
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Great Lord": {
+      "className": "Great Lord",
+      "baseStats": {
+        "hp": "18",
+        "str": "8",
+        "mag": "1",
+        "skl": "8",
+        "spd": "9",
+        "lck": "5",
+        "def": "7",
+        "res": "3",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "30",
+        "mag": "25",
+        "skl": "32",
+        "spd": "34",
+        "lck": "35",
+        "def": "29",
+        "res": "31",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "A"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "15%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "10%",
+        "lck": "15%",
+        "def": "10%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Dual Striker",
+        "requirements": "Learned at Level 1 and above."
+      }, {
+        "skillName": "Charm",
+        "requirements": "Learned at Level 10 and above."
+      }, {
+        "skillName": "Aether",
+        "requirements": "Learned at Level 25 and above."
+      }, {
+        "skillName": "Awakening",
+        "requirements": "Learned at Level 35 and above."
+      }],
+      "promotions": {
+        "method": "Use an Exalt's Brand.",
+        "classNames": []
+      }
+    },
+    "Tactician": {
+      "className": "Tactician",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Grandmaster": {
+      "className": "Grandmaster",
+      "baseStats": {
+        "hp": "18",
+        "str": "7",
+        "mag": "6",
+        "skl": "8",
+        "spd": "7",
+        "lck": "2",
+        "def": "6",
+        "res": "8",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "31",
+        "mag": "33",
+        "skl": "33",
+        "spd": "29",
+        "lck": "26",
+        "def": "28",
+        "res": "33",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }, {
+          "weapon": "Tome",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "15%",
+        "skl": "15%",
+        "spd": "5%",
+        "lck": "0%",
+        "def": "5%",
+        "res": "15%"
+      },
+      "classSkills": [{
+        "skillName": "Tactical Advice",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Solidarity",
+        "requirements": "Learnt at Level 10 and above."
+      }, {
+        "skillName": "Ignis",
+        "requirements": "Learnt at Level 25 and above."
+      }, {
+        "skillName": "Rally Spectrum",
+        "requirements": "Learnt at Level 35 and above."
+      }],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Cavalier": {
+      "className": "Cavalier",
+      "baseStats": {
+        "hp": "17",
+        "str": "6",
+        "mag": "0",
+        "skl": "5",
+        "spd": "5",
+        "lck": "3",
+        "def": "5",
+        "res": "3",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "40",
+        "str": "22",
+        "mag": "15",
+        "skl": "21",
+        "spd": "20",
+        "lck": "24",
+        "def": "22",
+        "res": "21",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "10%",
+        "lck": "15%",
+        "def": "10%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Elbow Room",
+        "requirements": "Learnt at Level 1."
+      }, {
+        "skillName": "Shelter",
+        "requirements": "Learnt at Level 10."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Cavalier.",
+        "classNames": ["Paladin", "Great Knight"]
+      }
+    },
+    "Paladin": {
+      "className": "Paladin",
+      "baseStats": {
+        "hp": "19",
+        "str": "8",
+        "mag": "1",
+        "skl": "7",
+        "spd": "7",
+        "lck": "4",
+        "def": "7",
+        "res": "6",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "31",
+        "mag": "26",
+        "skl": "30",
+        "spd": "30",
+        "lck": "32",
+        "def": "32",
+        "res": "32",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "A"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "10%",
+        "lck": "15%",
+        "def": "10%",
+        "res": "10%"
+      },
+      "classSkills": [{
+        "skillName": "Defender",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Aegis",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Cavalier.",
+        "classNames": []
+      }
+    },
+    "Knight": {
+      "className": "Knight",
+      "baseStats": {
+        "hp": "19",
+        "str": "8",
+        "mag": "0",
+        "skl": "5",
+        "spd": "3",
+        "lck": "3",
+        "def": "8",
+        "res": "1",
+        "mov": "4",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "45",
+        "str": "24",
+        "mag": "15",
+        "skl": "22",
+        "spd": "17",
+        "lck": "22",
+        "def": "26",
+        "res": "18",
+        "mov": "4",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "20%",
+        "str": "20%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "5%",
+        "lck": "10%",
+        "def": "20%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Defense +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Natural Cover",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Knight.",
+        "classNames": ["General", "Great Knight"]
+      }
+    },
+    "General": {
+      "className": "General",
+      "baseStats": {
+        "hp": "22",
+        "str": "11",
+        "mag": "0",
+        "skl": "7",
+        "spd": "3",
+        "lck": "4",
+        "def": "12",
+        "res": "3",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }, {
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "70",
+        "str": "38",
+        "mag": "25",
+        "skl": "32",
+        "spd": "25",
+        "lck": "32",
+        "def": "40",
+        "res": "30",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "A"
+        }, {
+          "weapon": "Axe",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "25%",
+        "str": "20%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "0%",
+        "lck": "10%",
+        "def": "20%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Wary Fighter",
+        "requirements": "Learned at Level 5 and above."
+      }, {
+        "skillName": "Pavise",
+        "requirements": "Learned at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Knight.",
+        "classNames": []
+      }
+    },
+    "Great Knight": {
+      "className": "Great Knight",
+      "baseStats": {
+        "hp": "21",
+        "str": "10",
+        "mag": "0",
+        "skl": "6",
+        "spd": "6",
+        "lck": "3",
+        "def": "10",
+        "res": "2",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }, {
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "65",
+        "str": "35",
+        "mag": "25",
+        "skl": "29",
+        "spd": "27",
+        "lck": "28",
+        "def": "37",
+        "res": "28",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }, {
+          "weapon": "Lance (weapon)",
+          "rank": "A"
+        }, {
+          "weapon": "Axe",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "20%",
+        "str": "20%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "5%",
+        "lck": "5%",
+        "def": "20%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Luna",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Armored Blow",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Cavalier.",
+        "classNames": []
+      }
+    },
+    "Myrmidon": {
+      "className": "Myrmidon",
+      "baseStats": {
+        "hp": "17",
+        "str": "4",
+        "mag": "0",
+        "skl": "5",
+        "spd": "8",
+        "lck": "3",
+        "def": "3",
+        "res": "3",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "40",
+        "str": "20",
+        "mag": "16",
+        "skl": "23",
+        "spd": "25",
+        "lck": "24",
+        "def": "18",
+        "res": "20",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "10%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "20%",
+        "lck": "15%",
+        "def": "0%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Duelist's Blow",
+        "requirements": "Learned at Level 1 and above."
+      }, {
+        "skillName": "Vantage",
+        "requirements": "Learned at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Samurai.",
+        "classNames": ["Swordmaster", "Master of Arms"]
+      }
+    },
+    "Swordmaster": {
+      "className": "Swordmaster",
+      "baseStats": {
+        "hp": "18",
+        "str": "6",
+        "mag": "2",
+        "skl": "7",
+        "spd": "11",
+        "lck": "4",
+        "def": "5",
+        "res": "5",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "30",
+        "mag": "28",
+        "skl": "32",
+        "spd": "35",
+        "lck": "33",
+        "def": "27",
+        "res": "31",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "S"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "10%",
+        "mag": "5%",
+        "skl": "15%",
+        "spd": "20%",
+        "lck": "15%",
+        "def": "0%",
+        "res": "10%"
+      },
+      "classSkills": [{
+        "skillName": "Astra",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Swordfaire",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Samurai.",
+        "classNames": []
+      }
+    },
+    "Thief": {
+      "className": "Thief",
+      "baseStats": {
+        "hp": "16",
+        "str": "3",
+        "mag": "1",
+        "skl": "4",
+        "spd": "8",
+        "lck": "1",
+        "def": "2",
+        "res": "4",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "19",
+        "mag": "18",
+        "skl": "20",
+        "spd": "24",
+        "lck": "18",
+        "def": "17",
+        "res": "22",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "10%",
+        "mag": "5%",
+        "skl": "10%",
+        "spd": "20%",
+        "lck": "0%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Locktouch",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Movement +1",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Outlaw.",
+        "classNames": ["Adventurer", "Bow Knight"]
+      }
+    },
+    "Trickster": {
+      "className": "Trickster",
+      "baseStats": {
+        "hp": "17",
+        "str": "4",
+        "mag": "6",
+        "skl": "6",
+        "spd": "10",
+        "lck": "2",
+        "def": "3",
+        "res": "8",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "E"
+        }, {
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "50",
+        "str": "27",
+        "mag": "31",
+        "skl": "27",
+        "spd": "34",
+        "lck": "27",
+        "def": "25",
+        "res": "34",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "A"
+        }, {
+          "weapon": "Staff",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "5%",
+        "mag": "15%",
+        "skl": "5%",
+        "spd": "20%",
+        "lck": "0%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Lucky 7",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Pass",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Outlaw.",
+        "classNames": []
+      }
+    },
+    "Assassin": {
+      "className": "Assassin",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Barbarian": {
+      "className": "Barbarian",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Berserker": {
+      "className": "Berserker",
+      "baseStats": {
+        "hp": "24",
+        "str": "12",
+        "mag": "0",
+        "skl": "8",
+        "spd": "9",
+        "lck": "0",
+        "def": "5",
+        "res": "0",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "70",
+        "str": "40",
+        "mag": "25",
+        "skl": "32",
+        "spd": "33",
+        "lck": "25",
+        "def": "27",
+        "res": "25",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "S"
+        }]
+      },
+      "growthRates": {
+        "hp": "30%",
+        "str": "25%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "15%",
+        "lck": "0%",
+        "def": "0%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Strength",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Axefaire",
+        "requirements": "Learnt at Level 15 and above."
+      }, {
+        "skillName": "",
+        "requirements": "Innate bonus from the class. Not listed."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Fighter.",
+        "classNames": []
+      }
+    },
+    "Fighter": {
+      "className": "Fighter",
+      "baseStats": {
+        "hp": "19",
+        "str": "7",
+        "mag": "0",
+        "skl": "6",
+        "spd": "6",
+        "lck": "2",
+        "def": "4",
+        "res": "1",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "45",
+        "str": "25",
+        "mag": "15",
+        "skl": "23",
+        "spd": "22",
+        "lck": "21",
+        "def": "19",
+        "res": "18",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "20%",
+        "str": "20%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "5%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "HP +5",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Gamble",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Fighter.",
+        "classNames": ["Berserker", "Hero"]
+      }
+    },
+    "Warrior": {
+      "className": "Warrior",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Mercenary": {
+      "className": "Mercenary",
+      "baseStats": {
+        "hp": "17",
+        "str": "5",
+        "mag": "0",
+        "skl": "7",
+        "spd": "6",
+        "lck": "2",
+        "def": "5",
+        "res": "2",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "40",
+        "str": "22",
+        "mag": "15",
+        "skl": "24",
+        "spd": "22",
+        "lck": "20",
+        "def": "21",
+        "res": "19",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "20%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "10%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Good Fortune",
+        "requirements": "Learned at Level 1 and higher."
+      }, {
+        "skillName": "Strong Riposte",
+        "requirements": "Learned at Level 10 and higher."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Mercenary.",
+        "classNames": ["Hero", "Bow Knight"]
+      }
+    },
+    "Hero": {
+      "className": "Hero",
+      "baseStats": {
+        "hp": "20",
+        "str": "8",
+        "mag": "0",
+        "skl": "10",
+        "spd": "8",
+        "lck": "3",
+        "def": "7",
+        "res": "2",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "32",
+        "mag": "25",
+        "skl": "35",
+        "spd": "32",
+        "lck": "31",
+        "def": "30",
+        "res": "27",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "A"
+        }, {
+          "weapon": "Axe",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "20%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "20%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "10%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Sol",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Axebreaker",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Mercenary.",
+        "classNames": []
+      }
+    },
+    "Archer": {
+      "className": "Archer",
+      "baseStats": {
+        "hp": "17",
+        "str": "5",
+        "mag": "0",
+        "skl": "7",
+        "spd": "5",
+        "lck": "2",
+        "def": "4",
+        "res": "1",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "40",
+        "str": "21",
+        "mag": "15",
+        "skl": "23",
+        "spd": "21",
+        "lck": "20",
+        "def": "20",
+        "res": "17",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "10%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Skill +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Quick Draw",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Archer.",
+        "classNames": ["Sniper", "Kinshi Knight"]
+      }
+    },
+    "Sniper": {
+      "className": "Sniper",
+      "baseStats": {
+        "hp": "19",
+        "str": "7",
+        "mag": "0",
+        "skl": "10",
+        "spd": "9",
+        "lck": "3",
+        "def": "6",
+        "res": "2",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "31",
+        "mag": "25",
+        "skl": "35",
+        "spd": "33",
+        "lck": "30",
+        "def": "31",
+        "res": "28",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Bow",
+          "rank": "S"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "20%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "10%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Certain Blow",
+        "requirements": "Learned at Level 5 and above."
+      }, {
+        "skillName": "Bowfaire",
+        "requirements": "Learned at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Archer.",
+        "classNames": []
+      }
+    },
+    "Bow Knight": {
+      "className": "Bow Knight",
+      "baseStats": {
+        "hp": "18",
+        "str": "6",
+        "mag": "0",
+        "skl": "8",
+        "spd": "9",
+        "lck": "3",
+        "def": "5",
+        "res": "6",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Bow",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "29",
+        "mag": "25",
+        "skl": "32",
+        "spd": "33",
+        "lck": "30",
+        "def": "27",
+        "res": "32",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }, {
+          "weapon": "Bow",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "10%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "15%",
+        "lck": "10%",
+        "def": "0%",
+        "res": "10%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Skill",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Shurikenbreaker",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Mercenary.\n",
+        "classNames": []
+      }
+    },
+    "Dark Mage": {
+      "className": "Dark Mage",
+      "baseStats": {
+        "hp": "16",
+        "str": "0",
+        "mag": "6",
+        "skl": "3",
+        "spd": "3",
+        "lck": "1",
+        "def": "3",
+        "res": "5",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "19",
+        "mag": "24",
+        "skl": "16",
+        "spd": "19",
+        "lck": "18",
+        "def": "19",
+        "res": "22",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [{
+        "skillName": "Heartseeker",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Malefic Aura",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Dark Mage.",
+        "classNames": ["Sorcerer", "Dark Knight"]
+      }
+    },
+    "Sorcerer": {
+      "className": "Sorcerer",
+      "baseStats": {
+        "hp": "17",
+        "str": "0",
+        "mag": "9",
+        "skl": "4",
+        "spd": "6",
+        "lck": "1",
+        "def": "5",
+        "res": "8",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "50",
+        "str": "25",
+        "mag": "35",
+        "skl": "26",
+        "spd": "29",
+        "lck": "26",
+        "def": "29",
+        "res": "33",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "S"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "0%",
+        "mag": "25%",
+        "skl": "0%",
+        "spd": "10%",
+        "lck": "0%",
+        "def": "5%",
+        "res": "15%"
+      },
+      "classSkills": [{
+        "skillName": "Vengeance",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Bowbreaker",
+        "requirements": "Learnt at Level 15 and above."
+      }, {
+        "skillName": "",
+        "requirements": "Innate."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Dark Mage.",
+        "classNames": []
+      }
+    },
+    "Mage": {
+      "className": "Mage",
+      "baseStats": {
+        "hp": "15",
+        "str": "0",
+        "mag": "4",
+        "skl": "5",
+        "spd": "6",
+        "lck": "1",
+        "def": "1",
+        "res": "3",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "17",
+        "mag": "22",
+        "skl": "20",
+        "spd": "23",
+        "lck": "19",
+        "def": "16",
+        "res": "20",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "5%",
+        "mag": "15%",
+        "skl": "10%",
+        "spd": "15%",
+        "lck": "5%",
+        "def": "0%",
+        "res": "10%"
+      },
+      "classSkills": [{
+        "skillName": "Magic +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Future Sight",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Diviner.",
+        "classNames": ["Onmyoji", "Basara"]
+      }
+    },
+    "Sage": {
+      "className": "Sage",
+      "baseStats": {
+        "hp": "16",
+        "str": "0",
+        "mag": "7",
+        "skl": "6",
+        "spd": "7",
+        "lck": "2",
+        "def": "3",
+        "res": "6",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "E"
+        }, {
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "45",
+        "str": "25",
+        "mag": "33",
+        "skl": "31",
+        "spd": "32",
+        "lck": "28",
+        "def": "25",
+        "res": "31",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "A"
+        }, {
+          "weapon": "Staff",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "0%",
+        "mag": "20%",
+        "skl": "10%",
+        "spd": "15%",
+        "lck": "0%",
+        "def": "0%",
+        "res": "15%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Magic",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Tomefaire",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Diviner.",
+        "classNames": []
+      }
+    },
+    "Dark Knight": {
+      "className": "Dark Knight",
+      "baseStats": {
+        "hp": "19",
+        "str": "8",
+        "mag": "6",
+        "skl": "6",
+        "spd": "5",
+        "lck": "3",
+        "def": "8",
+        "res": "6",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "32",
+        "mag": "31",
+        "skl": "28",
+        "spd": "27",
+        "lck": "31",
+        "def": "34",
+        "res": "30",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "B"
+        }, {
+          "weapon": "Tome",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "15%",
+        "str": "20%",
+        "mag": "10%",
+        "skl": "5%",
+        "spd": "5%",
+        "lck": "5%",
+        "def": "15%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Seal Magic",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Lifetaker",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Dark Mage.",
+        "classNames": []
+      }
+    },
+    "Cleric": {
+      "className": "Cleric",
+      "baseStats": {
+        "hp": "16",
+        "str": "0",
+        "mag": "4",
+        "skl": "3",
+        "spd": "6",
+        "lck": "4",
+        "def": "1",
+        "res": "6",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "18",
+        "mag": "21",
+        "skl": "20",
+        "spd": "22",
+        "lck": "23",
+        "def": "17",
+        "res": "24",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Staff",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "5%",
+        "mag": "15%",
+        "skl": "0%",
+        "spd": "15%",
+        "lck": "15%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Miracle",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Rally Luck",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Shrine Maiden.",
+        "classNames": ["Priestess", "Onmyoji"]
+      }
+    },
+    "War Cleric": {
+      "className": "War Cleric",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Troubadour": {
+      "className": "Troubadour",
+      "baseStats": {
+        "hp": "15",
+        "str": "0",
+        "mag": "3",
+        "skl": "7",
+        "spd": "5",
+        "lck": "4",
+        "def": "1",
+        "res": "4",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "16",
+        "mag": "19",
+        "skl": "24",
+        "spd": "20",
+        "lck": "23",
+        "def": "16",
+        "res": "21",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Staff",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "0%",
+        "mag": "10%",
+        "skl": "20%",
+        "spd": "10%",
+        "lck": "15%",
+        "def": "0%",
+        "res": "15%"
+      },
+      "classSkills": [{
+        "skillName": "Resistance +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Demoiselle",
+        "requirements": "Learnt at Level 10 and above. (Females)"
+      }, {
+        "skillName": "Gentilhomme",
+        "requirements": "Learnt at Level 10 and above. (Males)"
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Troubadour.",
+        "classNames": ["Strategist", "Butler"]
+      }
+    },
+    "Valkyrie": {
+      "className": "Valkyrie",
+      "baseStats": {
+        "hp": "16",
+        "str": "0",
+        "mag": "7",
+        "skl": "6",
+        "spd": "7",
+        "lck": "5",
+        "def": "2",
+        "res": "7",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "E"
+        }, {
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "45",
+        "str": "25",
+        "mag": "33",
+        "skl": "28",
+        "spd": "31",
+        "lck": "33",
+        "def": "25",
+        "res": "32",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Tome",
+          "rank": "B"
+        }, {
+          "weapon": "Staff",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "0%",
+        "mag": "15%",
+        "skl": "5%",
+        "spd": "10%",
+        "lck": "20%",
+        "def": "0%",
+        "res": "15%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Resistance",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Inspiration",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Troubadour.",
+        "classNames": []
+      }
+    },
+    "Pegasus Knight": {
+      "className": "Pegasus Knight",
+      "baseStats": {
+        "hp": "16",
+        "str": "3",
+        "mag": "0",
+        "skl": "5",
+        "spd": "7",
+        "lck": "4",
+        "def": "2",
+        "res": "6",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "10%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "15%",
+        "lck": "20%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Darting Blow",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Camaraderie",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Sky Knight.",
+        "classNames": ["Falcon Knight", "Kinshi Knight"]
+      }
+    },
+    "Falcon Knight": {
+      "className": "Falcon Knight",
+      "baseStats": {
+        "hp": "18",
+        "str": "5",
+        "mag": "4",
+        "skl": "6",
+        "spd": "10",
+        "lck": "5",
+        "def": "5",
+        "res": "9",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }, {
+          "weapon": "Staff",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "28",
+        "mag": "27",
+        "skl": "30",
+        "spd": "34",
+        "lck": "35",
+        "def": "27",
+        "res": "35",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "A"
+        }, {
+          "weapon": "Staff",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "10%",
+        "mag": "10%",
+        "skl": "10%",
+        "spd": "15%",
+        "lck": "20%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Speed",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Warding Blow",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Sky Knight.",
+        "classNames": []
+      }
+    },
+    "Dark Flier": {
+      "className": "Dark Flier",
+      "baseStats": {
+        "hp": "17",
+        "str": "4",
+        "mag": "7",
+        "skl": "5",
+        "spd": "9",
+        "lck": "4",
+        "def": "3",
+        "res": "9",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }, {
+          "weapon": "Tome",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "45",
+        "str": "27",
+        "mag": "32",
+        "skl": "28",
+        "spd": "33",
+        "lck": "32",
+        "def": "26",
+        "res": "34",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "B"
+        }, {
+          "weapon": "Tome",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "0%",
+        "str": "10%",
+        "mag": "15%",
+        "skl": "5%",
+        "spd": "15%",
+        "lck": "15%",
+        "def": "0%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Speed +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Relief",
+        "requirements": "Learnt at Level 10 and above."
+      }, {
+        "skillName": "Rally Movement",
+        "requirements": "Learnt at Level 25 and above."
+      }, {
+        "skillName": "Galeforce",
+        "requirements": "Learnt at Level 35 and above."
+      }],
+      "promotions": {
+        "method": "Use an Ebon Wing.",
+        "classNames": []
+      }
+    },
+    "Wyvern Rider": {
+      "className": "Wyvern Rider",
+      "baseStats": {
+        "hp": "17",
+        "str": "6",
+        "mag": "0",
+        "skl": "5",
+        "spd": "4",
+        "lck": "2",
+        "def": "7",
+        "res": "0",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "40",
+        "str": "22",
+        "mag": "17",
+        "skl": "21",
+        "spd": "20",
+        "lck": "19",
+        "def": "24",
+        "res": "15",
+        "mov": "7",
+        "weapons": [{
+          "weapon": "Axe",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "5%",
+        "skl": "10%",
+        "spd": "10%",
+        "lck": "5%",
+        "def": "20%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Strength +2",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Lunge",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Wyvern Rider.",
+        "classNames": ["Wyvern Lord", "Malig Knight"]
+      }
+    },
+    "Wyvern Lord": {
+      "className": "Wyvern Lord",
+      "baseStats": {
+        "hp": "19",
+        "str": "8",
+        "mag": "0",
+        "skl": "9",
+        "spd": "6",
+        "lck": "3",
+        "def": "10",
+        "res": "1",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }, {
+          "weapon": "Axe",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "33",
+        "mag": "25",
+        "skl": "33",
+        "spd": "29",
+        "lck": "28",
+        "def": "35",
+        "res": "26",
+        "mov": "8",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "B"
+        }, {
+          "weapon": "Axe",
+          "rank": "A"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "15%",
+        "mag": "0%",
+        "skl": "15%",
+        "spd": "10%",
+        "lck": "5%",
+        "def": "20%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Rally Defense",
+        "requirements": "Learnt at Level 5 and above."
+      }, {
+        "skillName": "Swordbreaker",
+        "requirements": "Learnt at Level 15 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Wyvern Rider.",
+        "classNames": []
+      }
+    },
+    "Griffon Rider": {
+      "className": "Griffon Rider",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Villager": {
+      "className": "Villager",
+      "baseStats": {
+        "hp": "17",
+        "str": "5",
+        "mag": "0",
+        "skl": "4",
+        "spd": "5",
+        "lck": "3",
+        "def": "4",
+        "res": "0",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "35",
+        "str": "19",
+        "mag": "15",
+        "skl": "19",
+        "spd": "19",
+        "lck": "22",
+        "def": "18",
+        "res": "15",
+        "mov": "5",
+        "weapons": [{
+          "weapon": "Lance (weapon)",
+          "rank": "C"
+        }]
+      },
+      "growthRates": {
+        "hp": "10%",
+        "str": "10%",
+        "mag": "0%",
+        "skl": "10%",
+        "spd": "10%",
+        "lck": "20%",
+        "def": "10%",
+        "res": "0%"
+      },
+      "classSkills": [{
+        "skillName": "Aptitude",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Underdog",
+        "requirements": "Learnt at Level 10 and above."
+      }],
+      "promotions": {
+        "method": "Use a Master Seal on a Level 10+ Villager.",
+        "classNames": ["Merchant", "Master of Arms"]
+      }
+    },
+    "Dancer": {
+      "className": "Dancer",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Taguel": {
+      "className": "Taguel",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Manakete": {
+      "className": "Manakete",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Conqueror": {
+      "className": "Conqueror",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
+    },
+    "Lodestar": {
+      "className": "Lodestar",
+      "baseStats": {
+        "hp": "19",
+        "str": "7",
+        "mag": "0",
+        "skl": "10",
+        "spd": "9",
+        "lck": "7",
+        "def": "7",
+        "res": "2",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "60",
+        "str": "29",
+        "mag": "26",
+        "skl": "35",
+        "spd": "34",
+        "lck": "40",
+        "def": "30",
+        "res": "29",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "S"
+        }]
+      },
+      "growthRates": {
+        "hp": "15%",
+        "str": "10%",
+        "mag": "0%",
+        "skl": "20%",
+        "spd": "10%",
+        "lck": "25%",
+        "def": "5%",
+        "res": "5%"
+      },
+      "classSkills": [{
+        "skillName": "Dancing Blade",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Charm",
+        "requirements": "Learnt at Level 10 and above."
+      }, {
+        "skillName": "Dual Guardsman",
+        "requirements": "Learnt at Level 25 and above."
+      }, {
+        "skillName": "Speedtaker",
+        "requirements": "Learnt at Level 35 and above."
+      }],
+      "promotions": {
+        "method": "Use a Hero's Brand.",
+        "classNames": []
+      }
+    },
+    "Dread Fighter": {
+      "className": "Dread Fighter",
+      "baseStats": {
+        "hp": "19",
+        "str": "8",
+        "mag": "3",
+        "skl": "6",
+        "spd": "8",
+        "lck": "1",
+        "def": "6",
+        "res": "9",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "E"
+        }, {
+          "weapon": "Axe",
+          "rank": "E"
+        }, {
+          "weapon": "Shuriken",
+          "rank": "E"
+        }]
+      },
+      "maxStats": {
+        "hp": "55",
+        "str": "32",
+        "mag": "28",
+        "skl": "29",
+        "spd": "31",
+        "lck": "26",
+        "def": "29",
+        "res": "34",
+        "mov": "6",
+        "weapons": [{
+          "weapon": "Sword",
+          "rank": "A"
+        }, {
+          "weapon": "Axe",
+          "rank": "B"
+        }, {
+          "weapon": "Shuriken",
+          "rank": "B"
+        }]
+      },
+      "growthRates": {
+        "hp": "15%",
+        "str": "15%",
+        "mag": "5%",
+        "skl": "5%",
+        "spd": "15%",
+        "lck": "0%",
+        "def": "5%",
+        "res": "20%"
+      },
+      "classSkills": [{
+        "skillName": "Even Keel",
+        "requirements": "Learnt at Level 1 and above."
+      }, {
+        "skillName": "Iron Will",
+        "requirements": "Learnt at Level 10 and above."
+      }, {
+        "skillName": "Clarity",
+        "requirements": "Learnt at Level 25 and above."
+      }, {
+        "skillName": "Aggressor",
+        "requirements": "Learnt at Level 35 and above."
+      }],
+      "promotions": {
+        "method": "Use a Dread Scroll.",
+        "classNames": []
+      }
+    },
+    "Bride": {
+      "className": "Bride",
+      "baseStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "maxStats": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": "",
+        "mov": "",
+        "weapons": []
+      },
+      "growthRates": {
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "classSkills": [],
+      "promotions": {
+        "method": "",
+        "classNames": []
+      }
     }
   }
 }

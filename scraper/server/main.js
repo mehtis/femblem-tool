@@ -33,9 +33,9 @@ app.get('/characters', async (req, res) => {
     ? `http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_${req.query.gameName}`
     : 'http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_Awakening'
   try {
-    //TODO: rp to scraper, just give character/game name?
+    //TODO: rp to scraper, just give character/game name? (also in classes)
     const webpage = await rp(url)
-    const result = await scraper.scrapeGame(webpage)
+    const result = await scraper.scrapeGameForCharacters(webpage)
     res.send(result)
   } catch (err) {
     if (err.statusCode && err.statusCode === 404)
@@ -53,18 +53,41 @@ app.get('/class', async (req, res) => {
   const url = req.query.className
     ? `http://fireemblem.wikia.com/wiki/${req.query.className}`
     : 'http://fireemblem.wikia.com/wiki/Cavalier'
-  const game = req.query.gameName === 'Awakening'
+  const gameNumber = req.query.gameName === 'Awakening'
     ? 'FE13'
     : 'FE14'
   try {
     const webpage = await rp(url)
-    const result = await scraper.scrapeClass(webpage, game)
+    const result = await scraper.scrapeClass(webpage, gameNumber)
     res.send(result)
   } catch (err) {
     if (err.statusCode && err.statusCode === 404)
     {
       res.status(404)
         .send('404, Class page not found')
+    } else {
+      res.status(404)
+        .send('Error')
+    }
+  }
+})
+
+app.get('/classes', async (req, res) => {
+  const url = req.query.gameName
+    ? `http://fireemblem.wikia.com/wiki/List_of_classes_in_Fire_Emblem_${req.query.gameName}`
+    : 'http://fireemblem.wikia.com/wiki/List_of_classes_in_Fire_Emblem_Awakening'
+  const gameNumber = req.query.gameName === 'Awakening'
+    ? 'FE13'
+    : 'FE14'
+  try {
+    const webpage = await rp(url)
+    const result = await scraper.scrapeGameForClasses(webpage, gameNumber)
+    res.send(result)
+  } catch (err) {
+    if (err.statusCode && err.statusCode === 404)
+    {
+      res.status(404)
+        .send('404, Game or class page not found')
     } else {
       res.status(404)
         .send('Error')
