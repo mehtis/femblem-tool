@@ -118,7 +118,6 @@ const scrapeClass = async (webpage, gameNumber, gameName) => {
         classNames: classPromotionNames($, '#Promotions', gameNumber),
       },
     }
-    console.log(classStats)
     if (classStats.className) {
       resolve(classStats)
     } else {
