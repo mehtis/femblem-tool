@@ -1,5 +1,5 @@
 {
-  "awakening": {
+  "Awakening": {
     "Lord": {
       "className": "Lord",
       "baseStats": {
@@ -32,7 +32,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "15%",
         "str": "15%",
         "mag": "0%",
@@ -86,7 +86,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "15%",
         "str": "15%",
         "mag": "0%",
@@ -140,7 +140,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -194,7 +194,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "15%",
@@ -260,7 +260,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -320,7 +320,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -374,7 +374,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "20%",
         "str": "20%",
         "mag": "0%",
@@ -434,7 +434,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "25%",
         "str": "20%",
         "mag": "0%",
@@ -500,7 +500,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "20%",
         "str": "20%",
         "mag": "0%",
@@ -554,7 +554,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "10%",
         "mag": "0%",
@@ -608,7 +608,7 @@
           "rank": "S"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "10%",
         "mag": "5%",
@@ -662,7 +662,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "10%",
         "mag": "5%",
@@ -722,7 +722,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "5%",
         "mag": "15%",
@@ -770,7 +770,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -812,7 +812,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -860,7 +860,7 @@
           "rank": "S"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "30%",
         "str": "25%",
         "mag": "0%",
@@ -917,7 +917,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "20%",
         "str": "20%",
         "mag": "0%",
@@ -965,7 +965,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -1013,7 +1013,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -1073,7 +1073,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "20%",
         "str": "15%",
         "mag": "0%",
@@ -1127,7 +1127,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -1181,7 +1181,7 @@
           "rank": "S"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -1241,7 +1241,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "10%",
         "mag": "0%",
@@ -1295,7 +1295,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -1349,7 +1349,7 @@
           "rank": "S"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "0%",
         "mag": "25%",
@@ -1406,7 +1406,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "5%",
         "mag": "15%",
@@ -1466,7 +1466,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "0%",
         "mag": "20%",
@@ -1526,7 +1526,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "15%",
         "str": "20%",
         "mag": "10%",
@@ -1580,7 +1580,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "5%",
         "mag": "15%",
@@ -1628,7 +1628,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -1676,7 +1676,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "0%",
         "mag": "10%",
@@ -1739,7 +1739,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "0%",
         "mag": "15%",
@@ -1790,7 +1790,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "10%",
         "mag": "0%",
@@ -1850,7 +1850,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "10%",
         "mag": "10%",
@@ -1910,7 +1910,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "0%",
         "str": "10%",
         "mag": "15%",
@@ -1970,7 +1970,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "5%",
@@ -2030,7 +2030,7 @@
           "rank": "A"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "15%",
         "mag": "0%",
@@ -2078,7 +2078,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -2126,7 +2126,7 @@
           "rank": "C"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "10%",
         "str": "10%",
         "mag": "0%",
@@ -2174,7 +2174,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -2216,7 +2216,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -2258,7 +2258,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -2300,7 +2300,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",
@@ -2348,7 +2348,7 @@
           "rank": "S"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "15%",
         "str": "10%",
         "mag": "0%",
@@ -2420,7 +2420,7 @@
           "rank": "B"
         }]
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "15%",
         "str": "15%",
         "mag": "5%",
@@ -2474,7 +2474,7 @@
         "mov": "",
         "weapons": []
       },
-      "growthRates": {
+      "classGrowthRates": {
         "hp": "",
         "str": "",
         "mag": "",

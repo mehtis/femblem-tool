@@ -1,5 +1,6 @@
 import CharacterSheet from '../components/CharacterSheet'
 import characters from '../static/characters.json'
+import classes from '../static/classes.json'
 import React from 'react'
 import uuid from 'uuid/v4'
 
@@ -40,7 +41,12 @@ class Characters extends React.Component {
           +
         </button>
         {this.state.characterList.length > 0 && this.state.characterList.map((character) =>
-          <CharacterSheet key={character.id} characters={characters[character.game]} id ={character.id} removeSheet={this.removeSheet}
+          <CharacterSheet
+            key={character.id}
+            characters={characters[character.game]}
+            classes={classes[character.game]}
+            id ={character.id}
+            removeSheet={this.removeSheet}
           />
         )}
         <style jsx>{`

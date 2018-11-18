@@ -101,7 +101,7 @@ const scrapeClass = async (webpage, gameNumber, gameName) => {
         'mov':  classStat($, 8, '#Maximum_Stats', gameNumber),
         'weapons': classWeapons($, '#Maximum_Stats', gameNumber),
       },
-      growthRates: {
+      classGrowthRates: {
         'hp':   classStat($, 0, '#Growth_Rates', gameNumber),
         'str':  classStat($, 1, '#Growth_Rates', gameNumber),
         'mag':  classStat($, 2, '#Growth_Rates', gameNumber),
