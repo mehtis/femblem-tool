@@ -18,10 +18,32 @@ const StatTable = (props) => (
       <tbody>
         <tr>
           {props.value && Object.entries(props.value).map((row) =>
-            //TODO: Proper support for Weapons
-            <td key={row[0]}>
-              {(row[1][0] && row[1][0].rank) || row[1]}
-            </td>
+            row[0] === 'weapons'
+              ?
+              <table>
+                <thead>
+                  <tr>
+                    {row[1].map((weapon) =>
+                      <th key={weapon.weapon}>
+                        {weapon.weapon}
+                      </th>
+                    )}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {row[1].map((weapon) =>
+                      <td key={weapon.weapon}>
+                        {weapon.rank}
+                      </td>
+                    )}
+                  </tr>
+                </tbody>
+              </table>
+              :
+              <td key={row[0]}>
+                {(row[1][0] && row[1][0].rank) || row[1]}
+              </td>
           )}
         </tr>
       </tbody>
@@ -126,6 +148,7 @@ class CharacterSheet extends React.Component {
     if (this.state.maxStats && this.state.maxStatModifiers) {
       let totalMaxStats = {...this.state.maxStats}
       Object.keys(totalMaxStats).map((stat) => {
+        if (stat === 'weapons') return
         const chr = parseInt(this.state.maxStatModifiers[stat], 10)
         const clss = parseInt(this.state.maxStats[stat], 10)
         if (Number.isInteger(clss)) {
