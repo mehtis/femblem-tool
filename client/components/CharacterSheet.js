@@ -59,48 +59,35 @@ const Selector = (props) =>
     `}</style>
   </div>
 
+const emptyGrowthRates = {
+  'hp': '-',
+  'str': '-',
+  'mag': '-',
+  'skl': '-',
+  'spd': '-',
+  'lck': '-',
+  'def': '-',
+  'res': '-'
+}
+
+const emptyMaxStats = {
+  'str': '-',
+  'mag': '-',
+  'skl': '-',
+  'spd': '-',
+  'lck': '-',
+  'def': '-',
+  'res': '-'
+}
+
 class CharacterSheet extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      'growthRates': {
-        'hp': '-',
-        'str': '-',
-        'mag': '-',
-        'skl': '-',
-        'spd': '-',
-        'lck': '-',
-        'def': '-',
-        'res': '-'
-      },
-      'maxStats': {
-        'str': '-',
-        'mag': '-',
-        'skl': '-',
-        'spd': '-',
-        'lck': '-',
-        'def': '-',
-        'res': '-'
-      },
-      'totalGrowthRates': {
-        'hp': '-',
-        'str': '-',
-        'mag': '-',
-        'skl': '-',
-        'spd': '-',
-        'lck': '-',
-        'def': '-',
-        'res': '-'
-      },
-      'totalMaxStats': {
-        'str': '-',
-        'mag': '-',
-        'skl': '-',
-        'spd': '-',
-        'lck': '-',
-        'def': '-',
-        'res': '-'
-      },
+      'growthRates': emptyGrowthRates,
+      'maxStats': emptyMaxStats,
+      'totalGrowthRates': emptyGrowthRates,
+      'totalMaxStats': emptyMaxStats,
     }
   }
 
@@ -125,7 +112,11 @@ class CharacterSheet extends React.Component {
       Object.keys(totalGrowthRates).map((stat) => {
         const chr = parseInt(this.state.growthRates[stat], 10)
         const clss = parseInt(this.state.classGrowthRates[stat], 10)
-        totalGrowthRates[stat] = chr && clss ? `${chr + clss}%` : '-'
+        if (Number.isInteger(clss)) {
+          totalGrowthRates[stat] = Number.isInteger(chr) ? `${chr + clss}%` : `${clss}%`
+        } else {
+          totalGrowthRates[stat] = '-'
+        }
       })
       this.setState({totalGrowthRates})
     }
@@ -138,10 +129,11 @@ class CharacterSheet extends React.Component {
       Object.keys(totalMaxStats).map((stat) => {
         const chr = parseInt(this.state.maxStatModifiers[stat], 10)
         const clss = parseInt(this.state.maxStats[stat], 10)
-        if (clss)
-          totalMaxStats[stat] = chr ? chr + clss : clss
-        else
+        if (Number.isInteger(clss)) {
+          totalMaxStats[stat] = Number.isInteger(chr) ? chr + clss : clss
+        } else {
           totalMaxStats[stat] = '-'
+        }
       })
       this.setState({totalMaxStats})
     }
