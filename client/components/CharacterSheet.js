@@ -123,7 +123,6 @@ class CharacterSheet extends React.Component {
   }
 
   setTotalMaxStats = () => {
-    //TODO: Weapons
     if (this.state.maxStats && this.state.maxStatModifiers) {
       let totalMaxStats = {...this.state.maxStats}
       Object.keys(totalMaxStats).map((stat) => {
