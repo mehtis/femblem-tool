@@ -64,7 +64,7 @@
           "weapon": "Sword",
           "rank": "E"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -82,7 +82,7 @@
           "weapon": "Sword",
           "rank": "A"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "B"
         }]
       },
@@ -238,7 +238,7 @@
           "weapon": "Sword",
           "rank": "E"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -256,7 +256,7 @@
           "weapon": "Sword",
           "rank": "B"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "B"
         }]
       },
@@ -298,7 +298,7 @@
           "weapon": "Sword",
           "rank": "E"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -316,7 +316,7 @@
           "weapon": "Sword",
           "rank": "A"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "A"
         }]
       },
@@ -355,7 +355,7 @@
         "res": "1",
         "mov": "4",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -370,7 +370,7 @@
         "res": "18",
         "mov": "4",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "B"
         }]
       },
@@ -409,7 +409,7 @@
         "res": "3",
         "mov": "5",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }, {
           "weapon": "Axe",
@@ -427,7 +427,7 @@
         "res": "30",
         "mov": "5",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "A"
         }, {
           "weapon": "Axe",
@@ -472,7 +472,7 @@
           "weapon": "Sword",
           "rank": "E"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }, {
           "weapon": "Axe",
@@ -493,7 +493,7 @@
           "weapon": "Sword",
           "rank": "B"
         }, {
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "A"
         }, {
           "weapon": "Axe",
@@ -1774,7 +1774,7 @@
         "res": "6",
         "mov": "7",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -1825,7 +1825,7 @@
         "res": "9",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }, {
           "weapon": "Staff",
@@ -1843,7 +1843,7 @@
         "res": "35",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "A"
         }, {
           "weapon": "Staff",
@@ -1885,7 +1885,7 @@
         "res": "9",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }, {
           "weapon": "Tome",
@@ -1903,7 +1903,7 @@
         "res": "34",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "B"
         }, {
           "weapon": "Tome",
@@ -2005,7 +2005,7 @@
         "res": "1",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }, {
           "weapon": "Axe",
@@ -2023,7 +2023,7 @@
         "res": "26",
         "mov": "8",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "B"
         }, {
           "weapon": "Axe",
@@ -2107,7 +2107,7 @@
         "res": "0",
         "mov": "5",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "E"
         }]
       },
@@ -2122,7 +2122,7 @@
         "res": "15",
         "mov": "5",
         "weapons": [{
-          "weapon": "Lance (weapon)",
+          "weapon": "Lance",
           "rank": "C"
         }]
       },
