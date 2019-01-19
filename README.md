@@ -25,4 +25,4 @@ For classes, `http://localhost:8081/class?className=Lord&gameName=Awakening`
 Search for characters per game, e.g. `http://localhost:8081/characters?gameName=Fates`
 
 ## Attribution
-Data downloaded from http://fireemblem.wikia.com/wiki/Fire_Emblem_Wiki
+Data collected from http://fireemblem.wikia.com/wiki/Fire_Emblem_Wiki
