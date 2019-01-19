@@ -2,6 +2,10 @@
   "name": "fembltool",
   "version": "0.0.3",
   "description": "Tool for optimizing Fire Emblem character creation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehtis/femblem-tool"
+  },
   "main": "src/server/main.js",
   "watch": {},
   "scripts": {
@@ -15,20 +19,20 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.3",
-    "isomorphic-unfetch": "^2.0.0",
-    "morgan": "^1.9.0",
-    "next": "^6.1.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "request": "^2.87.0",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^2.1.1",
+    "morgan": "^1.9.1",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.9.1",
-    "nodemon": "^1.17.5"
+    "eslint-plugin-react": "^7.12.4",
+    "nodemon": "^1.18.9"
   }
 }
