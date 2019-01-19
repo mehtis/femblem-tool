@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const getHeaders = () => {
+const getFooterLinks = () => {
   return [
     {link: 'index', title: 'Home'},
     {link: 'tool', title: 'Tool'},
@@ -8,7 +8,7 @@ const getHeaders = () => {
   ]
 }
 
-const HeaderItem = (item) => {
+const FooterLink = (item) => {
   return (
     <div>
       <Link key={item.link} href={`/${item.link}`}>
@@ -26,18 +26,19 @@ const HeaderItem = (item) => {
   )
 }
 
-const Header = () => (
+const Footer = () => (
   <div>
-    {getHeaders().map((header) => (
-      <HeaderItem key={header.link} {...header} />
+    {getFooterLinks().map((footer) => (
+      <FooterLink key={footer.link} {...footer} />
     ))}
+    <p>Source: <a href="https://github.com/mehtis/femblem-tool">GitHub</a></p>
     < style jsx>{`
     div {
-      border-bottom: 1px solid #DDD;
+      border-top: 1px solid #DDD;
       padding: 10px;
     }
     `}</style>
   </div>
 )
 
-export default Header
+export default Footer
