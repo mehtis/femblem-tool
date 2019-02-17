@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const StatTable = (props) => (
@@ -86,6 +87,30 @@ const Selector = (props) =>
     `}</style>
   </div>
 
+const Portrait = (props) =>
+  props.gameName && props.characterName
+    ?
+    <div>
+      <img
+        src={`../static/${props.gameName}/portraits/portrait_${props.characterName}.png`}
+        alt={props.characterName}
+        onError={props.error}
+      />
+      <style jsx>{`
+        img {
+          height: 80px;
+          width: 80px;
+        }
+        div {
+          height: 80px;
+          width: 80px;
+          float: left;
+        }
+      `}</style>
+    </div>
+    :
+    null
+
 const emptyGrowthRates = {
   'hp': '-',
   'str': '-',
@@ -169,19 +194,26 @@ class CharacterSheet extends React.Component {
   render() {
     return (
       <div className='character-sheet'>
-        <button className='remove-button' onClick={() => this.props.removeSheet(this.props.id)}>
-        x
-        </button>
-        <Selector
-          label="Name"
-          choices={Object.keys(this.props.characters)}
-          onChange={this.changeCharacter}
-        />
-        <Selector
-          label="Class"
-          choices={this.state.baseClasses}
-          onChange={this.changeClassStats}
-        />
+        <div className='upper-row-div'>
+          <button className='remove-button' onClick={() => this.props.removeSheet(this.props.id)}>
+          x
+          </button>
+          <Portrait
+            gameName={this.props.gameName}
+            characterName={this.state.characterName}
+            error={() => this.setState({portraitError: true})}
+          />
+          <Selector
+            label="Name"
+            choices={Object.keys(this.props.characters)}
+            onChange={this.changeCharacter}
+          />
+          <Selector
+            label="Class"
+            choices={this.state.baseClasses}
+            onChange={this.changeClassStats}
+          />
+        </div>
         <StatTable
           label="Growth rates"
           value={this.state.totalGrowthRates}
@@ -208,10 +240,41 @@ class CharacterSheet extends React.Component {
             border-radius: 50%;
             float: right;
           }
+          .upper-row-div {
+            height: 80px;
+          }
         `}</style>
       </div>
     )
   }
 }
-
+CharacterSheet.propTypes = {
+  characters: PropTypes.shape(PropTypes.shape({
+    baseClasses: PropTypes.arrayOf(PropTypes.string.isRequired),
+    characterName: PropTypes.string.isRequired,
+    growthRates: PropTypes.arrayOf(PropTypes.object).isRequired,
+    maxStatModifiers: PropTypes.arrayOf(PropTypes.object).isRequired,
+    otherSupports: PropTypes.arrayOf(PropTypes.string),
+    romanticSupports: PropTypes.arrayOf(PropTypes.string.isRequired),
+    startingClass: PropTypes.string,
+  })).isRequired,
+  classes: PropTypes.shape(PropTypes.shape({
+    baseStats: PropTypes.arrayOf(PropTypes.object).isRequired,
+    classGrowthRates: PropTypes.arrayOf(PropTypes.object).isRequired,
+    className: PropTypes.string.isRequired,
+    classSkills: PropTypes.arrayOf(PropTypes.shape({
+      skillName: PropTypes.string.isRequired,
+      requirements: PropTypes.string.isRequired,
+      //TODO: Effect
+    })).isRequired,
+    maxStats: PropTypes.arrayOf(PropTypes.object).isRequired,
+    promotions: PropTypes.shape({
+      classNames: PropTypes.arrayOf(PropTypes.string.isRequired),
+      method: PropTypes.string.isRequired,
+    })
+  })),
+  gameName: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  removeSheet: PropTypes.func.isRequired,
+}
 export default CharacterSheet

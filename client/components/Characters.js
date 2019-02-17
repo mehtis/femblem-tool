@@ -1,8 +1,10 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import uuid from 'uuid/v4'
+
 import CharacterSheet from '../components/CharacterSheet'
 import characters from '../static/characters.json'
 import classes from '../static/classes.json'
-import React from 'react'
-import uuid from 'uuid/v4'
 
 class Characters extends React.Component {
   constructor(props) {
@@ -43,6 +45,7 @@ class Characters extends React.Component {
         {this.state.characterList.length > 0 && this.state.characterList.map((character) =>
           <CharacterSheet
             key={character.id}
+            gameName={this.props.game}
             characters={characters[character.game]}
             classes={classes[character.game]}
             id ={character.id}
@@ -58,6 +61,10 @@ class Characters extends React.Component {
       </div>
     )
   }
+}
+
+Characters.propTypes = {
+  game: PropTypes.string.isRequired
 }
 
 Characters.defaultProps = {
