@@ -36,6 +36,7 @@ const Footer = () => (
     div {
       border-top: 1px solid #DDD;
       padding: 10px;
+      margin: 10px;
     }
     `}</style>
   </div>

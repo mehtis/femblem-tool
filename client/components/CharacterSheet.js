@@ -20,26 +20,28 @@ const StatTable = (props) => (
           {props.value && Object.entries(props.value).map((row) =>
             row[0] === 'weapons'
               ?
-              <table>
-                <thead>
-                  <tr>
-                    {row[1].map((weapon) =>
-                      <th key={weapon.weapon}>
-                        {weapon.weapon}
-                      </th>
-                    )}
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    {row[1].map((weapon) =>
-                      <td key={weapon.weapon}>
-                        {weapon.rank}
-                      </td>
-                    )}
-                  </tr>
-                </tbody>
-              </table>
+              <td className='weapons-td'>
+                <table>
+                  <thead>
+                    <tr>
+                      {row[1].map((weapon) =>
+                        <th key={weapon.weapon}>
+                          {weapon.weapon}
+                        </th>
+                      )}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      {row[1].map((weapon) =>
+                        <td key={weapon.weapon}>
+                          {weapon.rank}
+                        </td>
+                      )}
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
               :
               <td key={row[0]}>
                 {(row[1][0] && row[1][0].rank) || row[1]}
@@ -52,6 +54,9 @@ const StatTable = (props) => (
       th, td {
         border: 1px solid black;
         width: 30px;
+      }
+      .weapons-td {
+        border: none;
       }
       label {
         margin: 5px;
@@ -106,10 +111,10 @@ class CharacterSheet extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      'growthRates': emptyGrowthRates,
-      'maxStats': emptyMaxStats,
-      'totalGrowthRates': emptyGrowthRates,
-      'totalMaxStats': emptyMaxStats,
+      growthRates: emptyGrowthRates,
+      maxStats: emptyMaxStats,
+      totalGrowthRates: emptyGrowthRates,
+      totalMaxStats: emptyMaxStats,
     }
   }
 

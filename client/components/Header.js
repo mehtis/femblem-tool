@@ -35,6 +35,7 @@ const Header = () => (
     div {
       border-bottom: 1px solid #DDD;
       padding: 10px;
+      margin: 10px;
     }
     `}</style>
   </div>
