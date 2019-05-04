@@ -21,7 +21,7 @@ const StatTable = (props) => (
           {props.value && Object.entries(props.value).map((row) =>
             row[0] === 'weapons'
               ?
-              <td className='weapons-td'>
+              <td className='weapons-td' key={row[0]}>
                 <table>
                   <thead>
                     <tr>
