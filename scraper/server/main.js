@@ -10,8 +10,8 @@ app.use(morgan('short'))
 
 app.get('/', async (req, res) => {
   const url = req.query.characterName
-    ? `http://fireemblem.wikia.com/wiki/${req.query.characterName}`
-    : 'http://fireemblem.wikia.com/wiki/Avatar_(Awakening)'
+    ? `http://fireemblem.fandom.com/wiki/${req.query.characterName}`
+    : 'http://fireemblem.fandom.com/wiki/Avatar_(Awakening)'
   try {
     const webpage = await rp(url)
     const result = await scraper.scrapeCharacter(webpage)
@@ -30,8 +30,8 @@ app.get('/', async (req, res) => {
 
 app.get('/characters', async (req, res) => {
   const url = req.query.gameName
-    ? `http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_${req.query.gameName}`
-    : 'http://fireemblem.wikia.com/wiki/List_of_characters_in_Fire_Emblem_Awakening'
+    ? `http://fireemblem.fandom.com/wiki/List_of_characters_in_Fire_Emblem_${req.query.gameName}`
+    : 'http://fireemblem.fandom.com/wiki/List_of_characters_in_Fire_Emblem_Awakening'
   try {
     //TODO: rp to scraper, just give character/game name? (also in classes)
     const webpage = await rp(url)
@@ -51,8 +51,8 @@ app.get('/characters', async (req, res) => {
 
 app.get('/class', async (req, res) => {
   const url = req.query.className
-    ? `http://fireemblem.wikia.com/wiki/${req.query.className}`
-    : 'http://fireemblem.wikia.com/wiki/Cavalier'
+    ? `http://fireemblem.fandom.com/wiki/${req.query.className}`
+    : 'http://fireemblem.fandom.com/wiki/Cavalier'
   const gameNumber = req.query.gameName === 'Awakening'
     ? 'FE13'
     : 'FE14'
@@ -74,8 +74,8 @@ app.get('/class', async (req, res) => {
 
 app.get('/classes', async (req, res) => {
   const url = req.query.gameName
-    ? `http://fireemblem.wikia.com/wiki/List_of_classes_in_Fire_Emblem_${req.query.gameName}`
-    : 'http://fireemblem.wikia.com/wiki/List_of_classes_in_Fire_Emblem_Awakening'
+    ? `http://fireemblem.fandom.com/wiki/List_of_classes_in_Fire_Emblem_${req.query.gameName}`
+    : 'http://fireemblem.fandom.com/wiki/List_of_classes_in_Fire_Emblem_Awakening'
   const gameNumber = req.query.gameName === 'Awakening'
     ? 'FE13'
     : 'FE14'
