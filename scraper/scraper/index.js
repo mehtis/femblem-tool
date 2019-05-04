@@ -65,7 +65,7 @@ const scrapeGameForCharacters = async (webpage) => {
   })
 }
 
-const baseClasses = ($) => $('#Class_Sets').parent().next('table').find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text().trim())
+const baseClasses = ($) => $('#Class_Sets').parent().nextAll('table').first().find('tr > td[rowspan] > div > a[title]').toArray().map( (className) => $(className).text().trim())
 
 //TODO: growthRateWithClass (e.g. Lissa)
 const characterStat = ($, index, stat) => $(stat).parent().nextAll('.statbox').first().find('.s-cells').children(`td:nth-child(${index})`).text().trim()
@@ -127,9 +127,10 @@ const scrapeClass = async (webpage, gameNumber, gameName) => {
 }
 
 const classCrawl = ($, stat, gameNumber) => $(stat).parent().nextAll('.wikitable').first()
-  .find('tr > td > b')
+  .find('tbody > tr > th > a')
   .filter( (i, el) => $(el).text() === gameNumber)
   .parent().siblings()
+
 
 const classStat = ($, index, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).eq(index).text().trim()
 
@@ -161,9 +162,14 @@ const classPromotionNames = ($, stat, gameNumber) =>  $(classCrawl($, stat, game
 const scrapeGameForClasses = async (webpage, gameNumber) => {
   return new Promise(async (resolve, reject) => {
     const $ = cheerio.load(webpage)
-    const classUrlEndings = $('#Playable_Classes').parent().next().find('tbody').children().nextAll().map((i, el) => ($(el).children().first().next().children().attr('href'))).toArray()
+    const playableClassesList = classUrlEndings($, '#Playable_Classes')
+    const mainClassesList = classUrlEndings($, '#Main_Classes')
+    const nohrClassesList = classUrlEndings($, '#Nohr_Classes')
+    const hoshidoClassesList = classUrlEndings($, '#Hoshido_Classes')
+    const DLCClassesList = classUrlEndings($, '#DLC_Classes')
+    const classUrlEndingsList = playableClassesList.concat(mainClassesList, nohrClassesList, hoshidoClassesList,DLCClassesList)
     try {
-      const classes = await Promise.all(classUrlEndings.map(async (classUrls) => {
+      const classes = await Promise.all(classUrlEndingsList.map(async (classUrls) => {
         const url = `http://fireemblem.wikia.com/${classUrls}`
         const classPage = await rp(url)
         return await scrapeClass(classPage, gameNumber)
@@ -183,6 +189,8 @@ const scrapeGameForClasses = async (webpage, gameNumber) => {
     }
   })
 }
+
+const classUrlEndings = ($, tableHeader) => $(tableHeader).parent().next().find('tbody').children().nextAll().map((i, el) => ($(el).children().first().next().children().attr('href'))).toArray()
 
 module.exports.scrapeCharacter = scrapeCharacter
 module.exports.scrapeClass = scrapeClass
