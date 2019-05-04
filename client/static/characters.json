@@ -1276,19 +1276,19 @@
     }
   },
   "Fates" : {
-    "Avatar": {
-      "characterName": "Avatar",
-      "startingClass": "Tactician",
-      "baseClasses": [],
+    "Corrin": {
+      "characterName": "Corrin",
+      "startingClass": "Nohr Prince/Nohr Princess",
+      "baseClasses": ["Nohr Prince", "Nohr Princess"],
       "growthRates": {
-        "hp": "80*%",
-        "str": "55*%",
-        "mag": "50*%",
-        "skl": "50*%",
-        "spd": "50*%",
-        "lck": "55*%",
-        "def": "40*%",
-        "res": "30*%"
+        "hp": "",
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
       },
       "maxStatModifiers": {
         "str": "",
@@ -1305,7 +1305,7 @@
     "Azura": {
       "characterName": "Azura",
       "startingClass": "Songstress",
-      "baseClasses": [],
+      "baseClasses": ["Songstress", "Sky Knight"],
       "growthRates": {
         "hp": "25%",
         "str": "60%",
@@ -1325,13 +1325,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Jakob", " Kaze", " Silas"],
-      "otherSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Elise", " Shigure", " Azura's second child."]
+      "romanticSupports": [" Corrin (Male)", " Jakob", " Kaze", " Silas"],
+      "otherSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Elise", " Shigure", " Azura's second child."]
     },
     "Felicia": {
       "characterName": "Felicia",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour", "Mercenary"],
       "growthRates": {
         "hp": "40%",
         "str": "20%",
@@ -1351,13 +1351,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Jakob", " Kaze", " Silas"],
-      "otherSupports": [" The Avatar (Female)", " Hana", " Peri", " Flora", " Felicia's child"]
+      "romanticSupports": [" Corrin (Male)", " Jakob", " Kaze", " Silas"],
+      "otherSupports": [" Corrin (Female)", " Hana", " Peri", " Flora", " Felicia's child"]
     },
     "Jakob": {
       "characterName": "Jakob",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour", "Cavalier"],
       "growthRates": {
         "hp": "50%",
         "str": "40%",
@@ -1377,13 +1377,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Azura", " Felicia", " Mozu"],
-      "otherSupports": [" The Avatar (Male)", " Takumi", " Silas", " Gunter", " Dwyer", " Kana (if Jakob is his father)", " Shigure (if Jakob is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Azura", " Felicia", " Mozu"],
+      "otherSupports": [" Corrin (Male)", " Takumi", " Silas", " Gunter", " Dwyer", " Kana (if Jakob is his father)", " Shigure (if Jakob is his father)"]
     },
     "Silas": {
       "characterName": "Silas",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier", "Mercenary"],
       "growthRates": {
         "hp": "50%",
         "str": "60%",
@@ -1403,13 +1403,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Azura", "Felicia", "Mozu"],
-      "otherSupports": [" The Avatar (Male)", " Jakob", " Kaze", " Ryoma", " Sophie", " Kana (if Silas is his father)", " Shigure (if Silas is his father)"]
+      "romanticSupports": ["Corrin (Female)", "Azura", "Felicia", "Mozu"],
+      "otherSupports": [" Corrin (Male)", " Jakob", " Kaze", " Ryoma", " Sophie", " Kana (if Silas is his father)", " Shigure (if Silas is his father)"]
     },
     "Kaze": {
       "characterName": "Kaze",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Ninja", "Samurai"],
       "growthRates": {
         "hp": "60%",
         "str": "45%",
@@ -1429,13 +1429,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Felicia", " Azura", " Mozu"],
-      "otherSupports": [" The Avatar (Male)", "Saizo", "Silas", "Xander", "Midori", "Kana (if Kaze is his father)", "Shigure (if Kaze is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Felicia", " Azura", " Mozu"],
+      "otherSupports": [" Corrin (Male)", "Saizo", "Silas", "Xander", "Midori", "Kana (if Kaze is his father)", "Shigure (if Kaze is his father)"]
     },
     "Mozu": {
       "characterName": "Mozu",
       "startingClass": "Villager",
-      "baseClasses": [],
+      "baseClasses": ["Villager", "Archer"],
       "growthRates": {
         "hp": "0",
         "str": "0",
@@ -1455,13 +1455,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Jakob", " Kaze", " Silas"],
-      "otherSupports": [" The Avatar (Female)", " Oboro", " Effie", " Nyx", " Mozu's child"]
+      "romanticSupports": [" Corrin (Male)", " Jakob", " Kaze", " Silas"],
+      "otherSupports": [" Corrin (Female)", " Oboro", " Effie", " Nyx", " Mozu's child"]
     },
     "Shura": {
       "characterName": "Shura",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Outlaw", "Fighter", "Ninja"],
       "growthRates": {
         "hp": "30%",
         "str": "30%",
@@ -1481,13 +1481,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)"],
-      "otherSupports": ["The Avatar (Male)", "Kana (if Shura is his father)"]
+      "romanticSupports": ["Corrin (Female)"],
+      "otherSupports": ["Corrin (Male)", "Kana (if Shura is his father)"]
     },
     "Ryoma": {
       "characterName": "Ryoma",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Samurai", "Sky Knight"],
       "growthRates": {
         "hp": "60%",
         "str": "55%",
@@ -1507,13 +1507,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Camilla (Revelation)", " Elise (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", " Takumi", " Saizo", " Silas", " Hinoka", " Sakura", " Xander (Revelation)", " Shiro", " Shigure (If Ryoma is his father)", " Kana (If Ryoma is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Camilla (Revelation)", " Elise (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Takumi", " Saizo", " Silas", " Hinoka", " Sakura", " Xander (Revelation)", " Shiro", " Shigure (If Ryoma is his father)", " Kana (If Ryoma is his father)"]
     },
     "Hinoka": {
       "characterName": "Hinoka",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Sky Knight", "Spear Fighter"],
       "growthRates": {
         "hp": "+1",
         "str": "-1",
@@ -1533,13 +1533,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Xander (Revelation)", " Leo (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", "Ryoma", "Takumi", "Sakura", "Setsuna", "Azura", "Camilla (Revelation)", "Hinoka's children"]
+      "romanticSupports": [" Corrin (Male)", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Xander (Revelation)", " Leo (Revelation)"],
+      "otherSupports": [" Corrin (Female)", "Ryoma", "Takumi", "Sakura", "Setsuna", "Azura", "Camilla (Revelation)", "Hinoka's children"]
     },
     "Takumi": {
       "characterName": "Takumi",
       "startingClass": "Archer",
-      "baseClasses": [],
+      "baseClasses": ["Archer", "Spear Fighter"],
       "growthRates": {
         "hp": "+1",
         "str": "0",
@@ -1559,13 +1559,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Camilla (Revelation)", " Elise (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", " Ryoma", " Hinata", "Jakob", "Hinoka", "Sakura", "Leo (Revelation)", "Kiragi", "Shigure (if Takumi is his father)", "Kana (if Takumi is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Camilla (Revelation)", " Elise (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Ryoma", " Hinata", "Jakob", "Hinoka", "Sakura", "Leo (Revelation)", "Kiragi", "Shigure (if Takumi is his father)", "Kana (if Takumi is his father)"]
     },
     "Sakura": {
       "characterName": "Sakura",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Shrine Maiden", "Sky Knight"],
       "growthRates": {
         "hp": "0",
         "str": "+2",
@@ -1585,13 +1585,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Xander (Revelation)", " Leo (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Ryoma", "Takumi", "Hinoka", "Hana", "Azura", "Elise (Revelation)", "Sakura's children"]
+      "romanticSupports": [" Corrin (Male)", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Xander (Revelation)", " Leo (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Ryoma", "Takumi", "Hinoka", "Hana", "Azura", "Elise (Revelation)", "Sakura's children"]
     },
     "Saizo": {
       "characterName": "Saizo",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Ninja", "Samurai"],
       "growthRates": {
         "hp": "+1",
         "str": "0",
@@ -1611,13 +1611,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Charlotte (Revelation)", " Beruka (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", "Ryoma", "Subaki", "Kaze", "Laslow (Revelation)", "Asugi", " Shigure (if Saizo is his father)", "Kana (if Saizo is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Rinkah", " Orochi", " Kagero", " Hana", " Setsuna", " Oboro", " Felicia", " Azura", " Mozu", " Charlotte (Revelation)", " Beruka (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Ryoma", " Subaki", " Kaze", " Laslow (Revelation)", " Asugi", " Shigure (if Saizo is his father)", " Kana (if Saizo is his father)"]
     },
     "Kagero": {
       "characterName": "Kagero",
       "startingClass": "Ninja",
-      "baseClasses": [],
+      "baseClasses": ["Ninja", "Diviner"],
       "growthRates": {
         "hp": "+3",
         "str": "0",
@@ -1637,34 +1637,8 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Odin (Revelation only)", " Arthur (Revelation only)"],
-      "otherSupports": [" The Avatar (Female)", " Setsuna", " Rinkah", " Orochi", " Peri (Revelation only)", " Kagero's Child"]
-    },
-    "Azama": {
-      "characterName": "Azama",
-      "startingClass": "",
-      "baseClasses": [],
-      "growthRates": {
-        "hp": "+2",
-        "str": "-3",
-        "mag": "0",
-        "skl": "+1",
-        "spd": "0",
-        "lck": "+1",
-        "def": "0",
-        "res": ""
-      },
-      "maxStatModifiers": {
-        "str": "",
-        "mag": "",
-        "skl": "",
-        "spd": "",
-        "lck": "",
-        "def": "",
-        "res": ""
-      },
-      "romanticSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Effie (Revelation)", " Beruka (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", "Subaki", "Hayato", "Kaden", "Arthur (Revelation)", "Mitama", "Shigure (if Azama is his father)", "Kana (if Azama is his father)"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Hinata", " Azama", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Odin (Revelation only)", " Arthur (Revelation only)"],
+      "otherSupports": [" Corrin (Female)", " Rinkah", " Orochi", " Setsuna", " Peri (Revelation only)", " Kagero's Child"]
     },
     "Setsuna": {
       "characterName": "Setsuna",
@@ -1689,13 +1663,39 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Niles (Revelation)", " Arthur (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Hinoka", " Kagero", " Hana", " Selena (Revelation)", " Setsuna's child"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Niles (Revelation)", " Arthur (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Hinoka", " Kagero", " Hana", " Selena (Revelation)", " Setsuna's child"]
+    },
+    "Azama": {
+      "characterName": "Azama",
+      "startingClass": "",
+      "baseClasses": ["Monk", "Apothecary"],
+      "growthRates": {
+        "hp": "+2",
+        "str": "-3",
+        "mag": "0",
+        "skl": "+1",
+        "spd": "0",
+        "lck": "+1",
+        "def": "0",
+        "res": ""
+      },
+      "maxStatModifiers": {
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "romanticSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Effie (Revelation)", " Beruka (Revelation)"],
+      "otherSupports": [" Corrin (Male)", "Subaki", "Hayato", "Kaden", "Arthur (Revelation)", "Mitama", "Shigure (if Azama is his father)", "Kana (if Azama is his father)"]
     },
     "Hinata": {
       "characterName": "Hinata",
       "startingClass": "Samurai",
-      "baseClasses": [],
+      "baseClasses": ["Samurai", "Oni Savage"],
       "growthRates": {
         "hp": "+1",
         "str": "0",
@@ -1715,13 +1715,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Selena (Revelation)", " Peri (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", " Takumi", " Subaki", " Kaden", " Odin (Revelation)", " Hisame", " Shigure (if Hinata is his father)", " Kana (if Hinata is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Selena (Revelation)", " Peri (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Takumi", " Subaki", " Kaden", " Odin (Revelation)", " Hisame", " Shigure (if Hinata is his father)", " Kana (if Hinata is his father)"]
     },
     "Oboro": {
       "characterName": "Oboro",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Spear Fighter", "Apothecary"],
       "growthRates": {
         "hp": "+1",
         "str": "-1",
@@ -1741,13 +1741,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Niles (Revelation)", " Benny (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Mozu", " Rinkah", " Orochi", " Beruka (Revelation)", " Oboro's child"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Niles (Revelation)", " Benny (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Rinkah", " Orochi", " Mozu", " Beruka (Revelation)", " Oboro's child"]
     },
     "Hana": {
       "characterName": "Hana",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Samurai", "Shrine Maiden"],
       "growthRates": {
         "hp": "+1",
         "str": "0",
@@ -1767,13 +1767,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Laslow (Revelation)", " Keaton (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Felicia", " Sakura", " Setsuna", " Effie (Revelation)", " Hana's child"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Silas", " Kaze", " Laslow (Revelation)", " Keaton (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Felicia", " Sakura", " Setsuna", " Effie (Revelation)", " Hana's child"]
     },
     "Subaki": {
       "characterName": "Subaki",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Sky Knight", "Samurai"],
       "growthRates": {
         "hp": "-1",
         "str": "0",
@@ -1793,13 +1793,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Selena (Revelation)", " Nyx (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", " Saizo", " Azama", " Hinata", " Niles (Revelation)", " Caeldori", " Shigure (if Subaki is his father)", " Kana (if Subaki is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Felicia", " Azura", " Mozu", " Selena (Revelation)", " Nyx (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Saizo", " Azama", " Hinata", " Niles (Revelation)", " Caeldori", " Shigure (if Subaki is his father)", " Kana (if Subaki is his father)"]
     },
     "Hayato": {
       "characterName": "Hayato",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Diviner", "Oni Savage"],
       "growthRates": {
         "hp": "0",
         "str": "+1",
@@ -1819,13 +1819,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Effie (Revelation)", " Nyx (Revelation)"],
-      "otherSupports": [" The Avatar (Male)", " Azama", " Kaden", " Benny (Revelation)", " Fuga (Revelation)", " Rhajat", " Shigure (if Hayato is his father)", " Kana (if Hayato is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Azura", " Felicia", " Mozu", " Effie (Revelation)", " Nyx (Revelation)"],
+      "otherSupports": [" Corrin (Male)", " Azama", " Kaden", " Benny (Revelation)", " Fuga (Revelation)", " Rhajat", " Shigure (if Hayato is his father)", " Kana (if Hayato is his father)"]
     },
     "Rinkah": {
       "characterName": "Rinkah",
       "startingClass": "Oni Savage",
-      "baseClasses": [],
+      "baseClasses": ["Oni Savage", "Ninja"],
       "growthRates": {
         "hp": "-1",
         "str": "0",
@@ -1845,13 +1845,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Benny (Revelation)", " Keaton (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Orochi", " Kagero", " Oboro", " Charlotte (Revelation)", " Rinkah's child"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Benny (Revelation)", " Keaton (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Orochi", " Kagero", " Oboro", " Charlotte (Revelation)", " Rinkah's child"]
     },
     "Orochi": {
       "characterName": "Orochi",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Diviner", "Apothecary"],
       "growthRates": {
         "hp": "0",
         "str": "+3",
@@ -1871,13 +1871,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Laslow (Revelation)", " Odin (Revelation)"],
-      "otherSupports": [" The Avatar (Female)", " Rinkah", " Kagero", " Oboro", " Nyx (Revelation)", " Orochi's child"]
+      "romanticSupports": [" Corrin (Male)", " Ryoma", " Takumi", " Saizo", " Kaden", " Azama", " Hinata", " Subaki", " Hayato", " Jakob", " Kaze", " Silas", " Laslow (Revelation)", " Odin (Revelation)"],
+      "otherSupports": [" Corrin (Female)", " Rinkah", " Kagero", " Oboro", " Nyx (Revelation)", " Orochi's child"]
     },
     "Kaden": {
       "characterName": "Kaden",
       "startingClass": "Kitsune",
-      "baseClasses": [],
+      "baseClasses": ["Kitsune", "Diviner"],
       "growthRates": {
         "hp": "55%",
         "str": "50%",
@@ -1897,13 +1897,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Azura", " Felicia", " Mozu", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Peri (Revelation only)", " Charlotte (Revelation only)"],
-      "otherSupports": [" The Avatar (Male)", " Azama", " Hinata", " Hayato", " Keaton (Revelation only)", " Selkie", " Kana (if Kaden is his father)", " Shigure (if Kaden is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Azura", " Felicia", " Mozu", " Hinoka", " Sakura", " Kagero", " Setsuna", " Oboro", " Hana", " Rinkah", " Orochi", " Peri (Revelation only)", " Charlotte (Revelation only)"],
+      "otherSupports": [" Corrin (Male)", " Hinata", " Azama", " Hayato", " Keaton (Revelation only)", " Selkie", " Kana (if Kaden is his father)", " Shigure (if Kaden is his father)"]
     },
     "Reina": {
       "characterName": "Reina",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Sky Knight", "Diviner", "Ninja"],
       "growthRates": {
         "hp": "40%",
         "str": "50%",
@@ -1923,13 +1923,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)"],
-      "otherSupports": [" The Avatar (Female)", " Kana (if Reina is her mother)"]
+      "romanticSupports": [" Corrin (Male)"],
+      "otherSupports": [" Corrin (Female)", " Kana (if Reina is her mother)"]
     },
     "Scarlet": {
       "characterName": "Scarlet",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Wyvern Rider", "Outlaw", "Knight"],
       "growthRates": {
         "hp": "40%",
         "str": "60%",
@@ -1949,13 +1949,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)"],
-      "otherSupports": [" The Avatar (Female)", " Kana (If Scarlet is her mother)"]
+      "romanticSupports": [" Corrin (Male)"],
+      "otherSupports": [" Corrin (Female)", " Kana (If Scarlet is her mother)"]
     },
     "Xander": {
       "characterName": "Xander",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier", "Wyvern Rider"],
       "growthRates": {
         "hp": "55%",
         "str": "65%",
@@ -1975,13 +1975,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Azura", "Effie", "Peri", "Beruka", "Mozu", "Selena", "Nyx", "Charlotte", "Felicia", "Sakura (Revelation only)", "Hinoka (Revelation only)"],
-      "otherSupports": ["The Avatar (Male)", "Leo", "Camilla", "Elise", "Laslow", "Kaze", "Ryoma (Revelation only)", "Siegbert", " Shigure (If Xander is his father)", "Kana (if Xander is his father)"]
+      "romanticSupports": ["Corrin (Female)", "Azura", "Effie", "Peri", "Beruka", "Mozu", "Selena", "Nyx", "Charlotte", "Felicia", "Sakura (Revelation only)", "Hinoka (Revelation only)"],
+      "otherSupports": ["Corrin (Male)", "Leo", "Camilla", "Elise", "Laslow", "Kaze", "Ryoma (Revelation only)", "Siegbert", " Shigure (If Xander is his father)", "Kana (if Xander is his father)"]
     },
     "Camilla": {
       "characterName": "Camilla",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Wyvern Rider", "Dark Mage"],
       "growthRates": {
         "hp": "40%",
         "str": "65%",
@@ -2001,13 +2001,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Benny", "Keaton", "Arthur", "Laslow", "Odin", "Niles", "Jakob", "Silas", "Kaze", "Ryoma (Revelation only)", "Takumi (Revelation only)"],
-      "otherSupports": ["The Avatar (Female)", "Xander", "Leo", "Elise", "Selena", "Beruka", "Hinoka (Revelation only)", "Camilla's child"]
+      "romanticSupports": ["Corrin (Male)", "Benny", "Keaton", "Arthur", "Laslow", "Odin", "Niles", "Jakob", "Silas", "Kaze", "Ryoma (Revelation only)", "Takumi (Revelation only)"],
+      "otherSupports": ["Corrin (Female)", "Xander", "Leo", "Elise", "Selena", "Beruka", "Hinoka (Revelation only)", "Camilla's child"]
     },
     "Leo": {
       "characterName": "Leo",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Dark Mage", "Troubadour"],
       "growthRates": {
         "hp": "60%",
         "str": "45%",
@@ -2027,13 +2027,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Effie", "Azura", "Nyx", "Selena", "Beruka", "Peri", "Mozu", "Charlotte", "Felicia", "Sakura (Revelation only)", "Hinoka (Revelation only)"],
-      "otherSupports": ["The Avatar (Male)", "Xander", "Camilla", "Elise", "Odin", "Niles", "Takumi (Revelation only)", "Forrest", "Shigure (If Leo is his father)", "Kana (if Leo is his father)"]
+      "romanticSupports": ["Corrin (Female)", "Effie", "Azura", "Nyx", "Selena", "Beruka", "Peri", "Mozu", "Charlotte", "Felicia", "Sakura (Revelation only)", "Hinoka (Revelation only)"],
+      "otherSupports": ["Corrin (Male)", "Xander", "Camilla", "Elise", "Odin", "Niles", "Takumi (Revelation only)", "Forrest", "Shigure (If Leo is his father)", "Kana (if Leo is his father)"]
     },
     "Elise": {
       "characterName": "Elise",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour", "Wyvern Rider"],
       "growthRates": {
         "hp": "-1",
         "str": "+3",
@@ -2053,13 +2053,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Arthur", "Odin", "Laslow", "Niles", "Benny", "Keaton", "Jakob", "Kaze", "Silas", "Ryoma (Revelation only)", "Takumi (Revelation only)"],
-      "otherSupports": ["The Avatar (Female)", "Xander", "Leo", "Camilla", "Effie", "Azura", "Sakura (Revelation only)", "Elise's Children"]
+      "romanticSupports": ["Corrin (Male)", "Arthur", "Odin", "Laslow", "Niles", "Benny", "Keaton", "Jakob", "Kaze", "Silas", "Ryoma (Revelation only)", "Takumi (Revelation only)"],
+      "otherSupports": ["Corrin (Female)", "Xander", "Leo", "Camilla", "Effie", "Azura", "Sakura (Revelation only)", "Elise's Children"]
     },
     "Inigo": {
       "characterName": "Inigo",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Mercenary", "Myrmidon", "Barbarian", "Dread Fighter"],
       "growthRates": {
         "hp": "50%",
         "str": "35%",
@@ -2079,13 +2079,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Lucina (Can also be his sister)", "Kjelle", "Cynthia", "Severa", "Noire", "Nah", "Female Morgan (Can also be his sister)"],
-      "otherSupports": ["Olivia", "Inigo's Father", "The Avatar (Male) (Can also be Inigo's father)", "Owain", "Brady", "Gerome", "Male Morgan (Only if Inigo is his father)"]
+      "romanticSupports": ["Robin (Female)", "Lucina (Can also be his sister)", "Kjelle", "Cynthia", "Severa", "Noire", "Nah", "Female Morgan (Can also be his sister)"],
+      "otherSupports": ["Olivia", "Inigo's Father", "Robin (Male) (Can also be Inigo's father)", "Owain", "Brady", "Gerome", "Male Morgan (Only if Inigo is his father)"]
     },
     "Peri": {
       "characterName": "Peri",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier", "Dark Mage"],
       "growthRates": {
         "hp": "40%",
         "str": "65%",
@@ -2105,13 +2105,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Xander", " Leo", " Benny", " Keaton", " Arthur", " Odin", " Laslow", " Niles", " Jakob", " Silas", " Kaze", " Hinata (Revelation only)", " Kaden (Revelation only)"],
-      "otherSupports": [" The Avatar (Female)", " Felicia", "Charlotte", "Selena", "Kagero (Revelation only)", " Peri's child"]
+      "romanticSupports": [" Corrin (Male)", " Xander", " Leo", " Benny", " Keaton", " Arthur", " Odin", " Laslow", " Niles", " Jakob", " Silas", " Kaze", " Hinata (Revelation only)", " Kaden (Revelation only)"],
+      "otherSupports": [" Corrin (Female)", " Felicia", "Charlotte", "Selena", "Kagero (Revelation only)", " Peri's child"]
     },
     "Severa": {
       "characterName": "Severa",
       "startingClass": "Mercenary",
-      "baseClasses": [],
+      "baseClasses": ["Mercenary", "Dark Mage", "Pegasus Knight", "Bride"],
       "growthRates": {
         "hp": "45%",
         "str": "40%",
@@ -2131,13 +2131,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male) (Can also be Severa's father)", "Owain", "Inigo", "Brady", "Gerome", "Laurent", "Yarne", "Male Morgan"],
-      "otherSupports": ["Cordelia", "Severa's Father", "The Avatar (Female)", "Kjelle", "Cynthia", "Noire", "Female Morgan (Only if Morgan is her sister or daughter)"]
+      "romanticSupports": ["Robin (Male) (Can also be Severa's father)", "Owain", "Inigo", "Brady", "Gerome", "Laurent", "Yarne", "Male Morgan"],
+      "otherSupports": ["Cordelia", "Severa's Father", "Robin (Female)", "Kjelle", "Cynthia", "Noire", "Female Morgan (Only if Morgan is her sister or daughter)"]
     },
     "Beruka": {
       "characterName": "Beruka",
       "startingClass": "Wyvern Rider",
-      "baseClasses": [],
+      "baseClasses": ["Wyvern Rider", "Fighter"],
       "growthRates": {
         "hp": "-1",
         "str": "0",
@@ -2157,13 +2157,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Xander", "Leo", "Benny", "Arthur", "Niles", "Odin", "Laslow", "Keaton", "Jakob", "Kaze", "Silas", "Saizo (Revelation only)", "Azama (Revelation only)"],
-      "otherSupports": ["The Avatar (Female)", "Camilla", "Selena", "Charlotte", "Oboro (Revelation only)", "Beruka's child"]
+      "romanticSupports": ["Corrin (Male)", "Xander", "Leo", "Benny", "Arthur", "Niles", "Odin", "Laslow", "Keaton", "Jakob", "Kaze", "Silas", "Saizo (Revelation only)", "Azama (Revelation only)"],
+      "otherSupports": ["Corrin (Female)", "Camilla", "Selena", "Charlotte", "Oboro (Revelation only)", "Beruka's child"]
     },
     "Owain": {
       "characterName": "Owain",
       "startingClass": "Myrmidon",
-      "baseClasses": [],
+      "baseClasses": ["Myrmidon", "Priest", "Barbarian", "Dread Fighter"],
       "growthRates": {
         "hp": "45%",
         "str": "40%",
@@ -2183,13 +2183,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Lucina (The game lists their S support titles as 'Companions')", "Kjelle (Listed as 'Companions' if Sully is married to Chrom, making Kjelle and Owain cousins)", "Cynthia (Listed as 'Companions' if Sumia is married to Chrom, making Cynthia and Owain cousins)", "Severa", "Noire", "Nah", "Female Morgan (Can also be his sister)"],
-      "otherSupports": ["Lissa", "Owain's Father", "The Avatar (Male) (Can also be Owain's father)", "Inigo", "Brady", "Male Morgan (Can also be his son)"]
+      "romanticSupports": ["Robin (Female)", "Lucina (The game lists their S support titles as 'Companions')", "Kjelle (Listed as 'Companions' if Sully is married to Chrom, making Kjelle and Owain cousins)", "Cynthia (Listed as 'Companions' if Sumia is married to Chrom, making Cynthia and Owain cousins)", "Severa", "Noire", "Nah", "Female Morgan (Can also be his sister)"],
+      "otherSupports": ["Lissa", "Owain's Father", "Robin (Male) (Can also be Owain's father)", "Inigo", "Brady", "Male Morgan (Can also be his son)"]
     },
     "Niles": {
       "characterName": "Niles",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Outlaw", "Dark Mage"],
       "growthRates": {
         "hp": "40%",
         "str": "45%",
@@ -2209,13 +2209,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Both Genders)", "Camilla", "Elise", "Effie", "Charlotte", "Peri", "Selena", "Beruka", "Nyx", "Felicia", "Azura", "Mozu", "Setsuna (Revelation only)", "Oboro (Revelation only)"],
+      "romanticSupports": ["Corrin (Both Genders)", "Camilla", "Elise", "Effie", "Charlotte", "Peri", "Selena", "Beruka", "Nyx", "Felicia", "Azura", "Mozu", "Setsuna (Revelation only)", "Oboro (Revelation only)"],
       "otherSupports": ["Leo", "Odin", "Arthur", "Subaki (Revelation only)", "Nina", "Kana (Male) - If Niles is his father", "Shigure - If Niles is his father"]
     },
     "Effie": {
       "characterName": "Effie",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Knight", "Troubadour"],
       "growthRates": {
         "hp": "+3",
         "str": "0",
@@ -2235,13 +2235,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Jakob", "Kaze", "Silas", "Azama (Revelation only)", "Hayato (Revelation only)"],
-      "otherSupports": ["The Avatar (Female)", "Elise", "Mozu", "Nyx", "Hana (Revelation only)", "Effie's child"]
+      "romanticSupports": ["Corrin (Male)", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Jakob", "Kaze", "Silas", "Azama (Revelation only)", "Hayato (Revelation only)"],
+      "otherSupports": ["Corrin (Female)", "Elise", "Mozu", "Nyx", "Hana (Revelation only)", "Effie's child"]
     },
     "Arthur": {
       "characterName": "Arthur",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Fighter", "Cavalier"],
       "growthRates": {
         "hp": "70%",
         "str": "65%",
@@ -2261,13 +2261,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)", "Camilla", "Elise", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Charlotte", "Felicia", "Mozu", "Azura", "Setsuna (Revelation only)", "Kagero (Revelation only)"],
-      "otherSupports": ["The Avatar (Male)", "Benny", "Keaton", "Niles", "Azama (Revelation only)", "Percy", "Shigure (If Arthur is his father)", "Kana (if Arthur is his father)"]
+      "romanticSupports": ["Corrin (Female)", "Camilla", "Elise", "Effie", "Peri", "Beruka", "Selena", "Nyx", "Charlotte", "Felicia", "Mozu", "Azura", "Setsuna (Revelation only)", "Kagero (Revelation only)"],
+      "otherSupports": ["Corrin (Male)", "Benny", "Keaton", "Niles", "Azama (Revelation only)", "Percy", "Shigure (If Arthur is his father)", "Kana (if Arthur is his father)"]
     },
     "Nyx": {
       "characterName": "Nyx",
       "startingClass": "Dark Mage",
-      "baseClasses": [],
+      "baseClasses": ["Dark Mage", "Outlaw"],
       "growthRates": {
         "hp": "30%",
         "str": "15%",
@@ -2287,13 +2287,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Xander", " Leo", " Benny", " Keaton", " Arthur", " Odin", " Laslow", " Niles", " Jakob", " Kaze", " Silas", " Subaki (Revelation only)", " Hayato (Revelation only)"],
-      "otherSupports": [" The Avatar (Female)", " Charlotte", " Mozu", " Effie", " Orochi (Revelation only)", " Nyx's Children"]
+      "romanticSupports": [" Corrin (Male)", " Xander", " Leo", " Benny", " Keaton", " Arthur", " Odin", " Laslow", " Niles", " Jakob", " Kaze", " Silas", " Subaki (Revelation only)", " Hayato (Revelation only)"],
+      "otherSupports": [" Corrin (Female)", " Charlotte", " Mozu", " Effie", " Orochi (Revelation only)", " Nyx's Children"]
     },
     "Charlotte": {
       "characterName": "Charlotte",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Fighter", "Troubadour"],
       "growthRates": {
         "hp": "+3",
         "str": "0",
@@ -2313,13 +2313,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Jakob", "Kaze", "Silas", "Saizo (Revelation)", "Kaden (Revelation)"],
-      "otherSupports": ["The Avatar (Female)", "Nyx", "Peri", "Beruka", "Rinkah (Revelation)", "Charlotte's child"]
+      "romanticSupports": ["Corrin (Male)", "Xander", "Leo", "Benny", "Keaton", "Arthur", "Odin", "Laslow", "Niles", "Jakob", "Kaze", "Silas", "Saizo (Revelation)", "Kaden (Revelation)"],
+      "otherSupports": ["Corrin (Female)", "Nyx", "Peri", "Beruka", "Rinkah (Revelation)", "Charlotte's child"]
     },
     "Benny": {
       "characterName": "Benny",
       "startingClass": "Knight",
-      "baseClasses": [],
+      "baseClasses": ["Knight", "Fighter"],
       "growthRates": {
         "hp": "0",
         "str": "0",
@@ -2339,13 +2339,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Nyx", " Charlotte", " Selena", " Beruka", " Camilla", " Effie", " Peri", " Felicia", " Mozu", " Azura", " Elise", " Rinkah (Revelation only)", " Oboro (Revelation only)"],
-      "otherSupports": [" The Avatar (Male)", " Keaton", " Arthur", " Hayato (Revelation only)", " Ignatius", " Shigure (If Benny is his father)", " Kana (If Benny is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Nyx", " Charlotte", " Selena", " Beruka", " Camilla", " Effie", " Peri", " Felicia", " Mozu", " Azura", " Elise", " Rinkah (Revelation only)", " Oboro (Revelation only)"],
+      "otherSupports": [" Corrin (Male)", " Keaton", " Arthur", " Hayato (Revelation only)", " Ignatius", " Shigure (If Benny is his father)", " Kana (If Benny is his father)"]
     },
     "Keaton": {
       "characterName": "Keaton",
       "startingClass": "Wolfskin",
-      "baseClasses": [],
+      "baseClasses": ["Wolfskin", "Fighter"],
       "growthRates": {
         "hp": "80%",
         "str": "80%",
@@ -2365,13 +2365,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Camilla", " Elise", " Effie", " Charlotte", " Selena", " Beruka", " Peri", " Nyx", " Felicia", " Azura", " Mozu", " Hana (Revelation only)", " Rinkah (Revelation only)"],
-      "otherSupports": [" The Avatar (Male)", " Benny", " Laslow", " Arthur", " Kaden (Revelation only)", " Velouria", " Shigure (If Keaton is his father)", " Kana (If Keaton is his father)"]
+      "romanticSupports": [" Corrin (Female)", " Camilla", " Elise", " Effie", " Charlotte", " Selena", " Beruka", " Peri", " Nyx", " Felicia", " Azura", " Mozu", " Hana (Revelation only)", " Rinkah (Revelation only)"],
+      "otherSupports": [" Corrin (Male)", " Benny", " Laslow", " Arthur", " Kaden (Revelation only)", " Velouria", " Shigure (If Keaton is his father)", " Kana (If Keaton is his father)"]
     },
     "Gunter": {
       "characterName": "Gunter",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier", "Wyvern Rider", "Mercenary"],
       "growthRates": {
         "hp": "35%",
         "str": "25%",
@@ -2391,13 +2391,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)"],
-      "otherSupports": [" The Avatar (Male)", " Jakob", " Kana (If Gunter is his father)"]
+      "romanticSupports": [" Corrin (Female)"],
+      "otherSupports": [" Corrin (Male)", " Jakob", " Kana (If Gunter is his father)"]
     },
     "Flora": {
       "characterName": "Flora",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour", "Dark Mage", "Mercenary"],
       "growthRates": {
         "hp": "35%",
         "str": "50%",
@@ -2417,13 +2417,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)"],
-      "otherSupports": [" The Avatar (Female)", " Felicia", " Kana (If Flora is her mother)"]
+      "romanticSupports": [" Corrin (Male)"],
+      "otherSupports": [" Corrin (Female)", " Felicia", " Kana (If Flora is her mother)"]
     },
     "Yukimura": {
       "characterName": "Yukimura",
       "startingClass": "Mechanist",
-      "baseClasses": [],
+      "baseClasses": ["Apothecary", "Samurai", "Monk"],
       "growthRates": {
         "hp": "35%",
         "str": "35%",
@@ -2443,13 +2443,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)"],
-      "otherSupports": ["The Avatar (Male)", "Kana - if Yukimura is his father"]
+      "romanticSupports": ["Corrin (Female)"],
+      "otherSupports": ["Corrin (Male)", "Kana - if Yukimura is his father"]
     },
     "Izana": {
       "characterName": "Izana",
       "startingClass": "Onmyoji",
-      "baseClasses": [],
+      "baseClasses": ["Monk", "Samurai", "Apothecary"],
       "growthRates": {
         "hp": "45%",
         "str": "15%",
@@ -2469,13 +2469,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)"],
-      "otherSupports": ["The Avatar (Male)", "Kana (if Izana is his father)"]
+      "romanticSupports": ["Corrin (Female)"],
+      "otherSupports": ["Corrin (Male)", "Kana (if Izana is his father)"]
     },
     "Fuga": {
       "characterName": "Fuga",
       "startingClass": "Master of Arms",
-      "baseClasses": [],
+      "baseClasses": ["Samurai", "Oni Savage", "Monk"],
       "growthRates": {
         "hp": "40%",
         "str": "35%",
@@ -2495,13 +2495,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female)"],
-      "otherSupports": ["The Avatar (Male)", "Hayato", "Kana (if Fuga is his father)"]
+      "romanticSupports": ["The Corrin (Female)"],
+      "otherSupports": ["The Corrin (Male)", "Hayato", "Kana (if Fuga is his father)"]
     },
     "Kana": {
       "characterName": "Kana",
       "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/7/77/Female_Kana_Heroes_Sprite.png/revision/latest/scale-to-width-down/100?cb=20180501022008\" \t alt=\"Female Kana Heroes Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Female_Kana_Heroes_Sprite.png\" \tdata-image-name=\"Female Kana Heroes Sprite.png\" \t \t width=\"100\"  \t height=\"139\"  \t \t \t \t>",
-      "baseClasses": [],
+      "baseClasses": ["Nohr Prince"],
       "growthRates": {
         "hp": "30%",
         "str": "35%",
@@ -2522,12 +2522,12 @@
         "res": ""
       },
       "romanticSupports": [" Midori", " Sophie"],
-      "otherSupports": ["The Avatar (Female)", "Kana's father", "Kana's sibling", "Shiro (Can also be his brother or father)", "Siegbert (Can also be his brother or father)", "Percy (Can also be his brother or father)"]
+      "otherSupports": ["Corrin (Female)", "Kana's father", "Kana's sibling", "Shiro (Can also be his brother or father)", "Siegbert (Can also be his brother or father)", "Percy (Can also be his brother or father)"]
     },
     "Shigure": {
       "characterName": "Shigure",
       "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/b/b6/Heroes_Shigure_Sprite_%28Performing_Arts%29.png/revision/latest/scale-to-width-down/100?cb=20180612160240\" \t alt=\"Heroes Shigure Sprite (Performing Arts)\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Shigure_Sprite_%28Performing_Arts%29.png\" \tdata-image-name=\"Heroes Shigure Sprite (Performing Arts).png\" \t \t width=\"100\"  \t height=\"137\"  \t \t \t \t>",
-      "baseClasses": [],
+      "baseClasses": ["Sky Knight"],
       "growthRates": {
         "hp": "35%",
         "str": "45%",
@@ -2547,13 +2547,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)"],
-      "otherSupports": [" The Avatar (Male) (Can also be his father)", " Azura", " Shigure's father", " Shigure's sibling", " Forrest (Can also be his brother)", " Hisame (Can also be his brother)", " Male Kana (If Shigure is his father)"]
+      "romanticSupports": [" Corrin (Female)"],
+      "otherSupports": [" Corrin (Male) (Can also be his father)", " Azura", " Shigure's father", " Shigure's sibling", " Forrest (Can also be his brother)", " Hisame (Can also be his brother)", " Male Kana (If Shigure is his father)"]
     },
     "Dwyer": {
       "characterName": "Dwyer",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour"],
       "growthRates": {
         "hp": "45%",
         "str": "45%",
@@ -2573,13 +2573,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female)", " Midori", " Sophie"],
-      "otherSupports": [" The Avatar (Male)", " Jakob", " Dwyer's mother", " Kiragi", " Asugi", " Percy", " Kana (if Dwyer is his father or brother)", " Shigure (if Dwyer is his brother)"]
+      "romanticSupports": [" Corrin (Female)", " Midori", " Sophie"],
+      "otherSupports": [" Corrin (Male)", " Jakob", " Dwyer's mother", " Kiragi", " Asugi", " Percy", " Kana (if Dwyer is his father or brother)", " Shigure (if Dwyer is his brother)"]
     },
     "Sophie": {
       "characterName": "Sophie",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier"],
       "growthRates": {
         "hp": "35%",
         "str": "35%",
@@ -2599,13 +2599,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Kana (Male) (Can also be her brother) ", "Shigure (Can also be her brother) ", "Dwyer ", "Siegbert ", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame"],
-      "otherSupports": ["Silas", "Sophie's Mother", "The Avatar (Female) (Can also be her mother)", "Caeldori", "Velouria", "Soleil", "Kana (Female) - If Sophie is her mother"]
+      "romanticSupports": ["Corrin (Male)", "Kana (Male) (Can also be her brother) ", "Shigure (Can also be her brother) ", "Dwyer ", "Siegbert ", "Forrest", "Ignatius", "Percy", "Shiro", "Kiragi", "Asugi", "Hisame"],
+      "otherSupports": ["Silas", "Sophie's Mother", "Corrin (Female) (Can also be her mother)", "Caeldori", "Velouria", "Soleil", "Kana (Female) - If Sophie is her mother"]
     },
     "Midori": {
       "characterName": "Midori",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Apothecary"],
       "growthRates": {
         "hp": "45%",
         "str": "35%",
@@ -2625,13 +2625,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Percy", " Ignatius", " Siegbert", " Forrest", " Hisame", " Kiragi", " Asugi  (The game lists their S support titles as 'Companions')", " Shiro"],
-      "otherSupports": [" Kaze", " Midori's Mother", " The Avatar (Female) (Can also be her mother)", " Selkie", " Kana (Female) (Can also be her daughter)", " Ophelia"]
+      "romanticSupports": [" Corrin (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Percy", " Ignatius", " Siegbert", " Forrest", " Hisame", " Kiragi", " Asugi  (The game lists their S support titles as 'Companions')", " Shiro"],
+      "otherSupports": [" Kaze", " Midori's Mother", " Corrin (Female) (Can also be her mother)", " Selkie", " Kana (Female) (Can also be her daughter)", " Ophelia"]
     },
     "Shiro": {
       "characterName": "Shiro",
       "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/d/de/Heroes_Shiro_Sprite.png/revision/latest/scale-to-width-down/120?cb=20180612160241\" \t alt=\"Heroes Shiro Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Shiro_Sprite.png\" \tdata-image-name=\"Heroes Shiro Sprite.png\" \t \t width=\"120\"  \t height=\"149\"  \t \t \t \t>",
-      "baseClasses": [],
+      "baseClasses": ["Spear Fighter"],
       "growthRates": {
         "hp": "50%",
         "str": "50%",
@@ -2651,13 +2651,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female) (Can also be his mother)", "Kana (Female)", "Sophie", "Midori", "Caeldori", "Selkie", "Mitama", "Rhajat", "Nina (Revelation only)", "Ophelia (Revelation only)"],
-      "otherSupports": ["Ryoma", "Shiro's Mother", "The Avatar (Male)", "Kiragi", "Asugi", "Kana (Male) (Can also be his son or brother)", "Siegbert (Revelation only)", "Shigure - If Shiro is his brother"]
+      "romanticSupports": ["Corrin (Female) (Can also be his mother)", "Kana (Female)", "Sophie", "Midori", "Caeldori", "Selkie", "Mitama", "Rhajat", "Nina (Revelation only)", "Ophelia (Revelation only)"],
+      "otherSupports": ["Ryoma", "Shiro's Mother", "Corrin (Male)", "Kiragi", "Asugi", "Kana (Male) (Can also be his son or brother)", "Siegbert (Revelation only)", "Shigure - If Shiro is his brother"]
     },
     "Kiragi": {
       "characterName": "Kiragi",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Archer"],
       "growthRates": {
         "hp": "45%",
         "str": "40%",
@@ -2677,13 +2677,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female) (Can also be his mother)", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori", "Velouria (Revelation only)", "Soleil (Revelation only)"],
-      "otherSupports": ["Takumi", "Kiragi's Mother", "The Avatar (Male)", "Shiro", "Hisame", "Dwyer", "Forrest (Revelation only)", "Kana (Male) - If Kiragi is his father or brother", "Shigure - If Kiragi is his brother"]
+      "romanticSupports": ["Corrin (Female) (Can also be his mother)", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori", "Velouria (Revelation only)", "Soleil (Revelation only)"],
+      "otherSupports": ["Takumi", "Kiragi's Mother", "Corrin (Male)", "Shiro", "Hisame", "Dwyer", "Forrest (Revelation only)", "Kana (Male) - If Kiragi is his father or brother", "Shigure - If Kiragi is his brother"]
     },
     "Asugi": {
       "characterName": "Asugi",
       "startingClass": "Ninja",
-      "baseClasses": [],
+      "baseClasses": ["Ninja"],
       "growthRates": {
         "hp": "40%",
         "str": "45%",
@@ -2703,13 +2703,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female) (Can also be his mother)", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori (The game lists their S support titles as 'Companions')", "Soleil (Revelation only)", "Nina (Revelation only)"],
-      "otherSupports": ["Saizo", "Asugi's mother", "The Avatar (Male)", "Shiro", "Hisame", "Dwyer", "Ignatius (Revelation only)", "Kana (Male) - If Asugi is his father or brother", "Shigure - If Asugi is his brother"]
+      "romanticSupports": ["Corrin (Female) (Can also be his mother)", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori (The game lists their S support titles as 'Companions')", "Soleil (Revelation only)", "Nina (Revelation only)"],
+      "otherSupports": ["Saizo", "Asugi's mother", "Corrin (Male)", "Shiro", "Hisame", "Dwyer", "Ignatius (Revelation only)", "Kana (Male) - If Asugi is his father or brother", "Shigure - If Asugi is his brother"]
     },
     "Mitama": {
       "characterName": "Mitama",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Shrine Maiden"],
       "growthRates": {
         "hp": "45%",
         "str": "40%",
@@ -2729,13 +2729,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Kiragi", " Shiro", " Hisame", " Asugi", " Siegbert (Revelation only)", " Percy (Revelation only)"],
-      "otherSupports": [" Azama", " Mitama's mother", " The Avatar (Female) (Can also be her mother)", " Rhajat", " Caeldori", " Kana (Female) (Can also be her daughter)", " Soleil (Revelation)"]
+      "romanticSupports": [" Corrin (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Kiragi", " Shiro", " Hisame", " Asugi", " Siegbert (Revelation only)", " Percy (Revelation only)"],
+      "otherSupports": [" Azama", " Mitama's mother", " Corrin (Female) (Can also be her mother)", " Rhajat", " Caeldori", " Kana (Female) (Can also be her daughter)", " Soleil (Revelation)"]
     },
     "Hisame": {
       "characterName": "Hisame",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Samurai"],
       "growthRates": {
         "hp": "50%",
         "str": "40%",
@@ -2755,13 +2755,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female) (Can also be his mother) ", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori", "Velouria (Revelation only)", "Ophelia (Revelation only)"],
-      "otherSupports": ["Hinata", "Hisame's mother", "The Avatar (Male)", "Asugi ", "Shigure (Can also be his brother)", "Kiragi", "Percy (Revelation only)", "Kana (Male) - If Hisame is his father or brother"]
+      "romanticSupports": ["Corrin (Female) (Can also be his mother) ", "Kana (Female)", "Selkie", "Mitama", "Caeldori", "Rhajat", "Sophie", "Midori", "Velouria (Revelation only)", "Ophelia (Revelation only)"],
+      "otherSupports": ["Hinata", "Hisame's mother", "Corrin (Male)", "Asugi ", "Shigure (Can also be his brother)", "Kiragi", "Percy (Revelation only)", "Kana (Male) - If Hisame is his father or brother"]
     },
     "Caeldori": {
       "characterName": "Caeldori",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Sky Knight"],
       "growthRates": {
         "hp": "55%",
         "str": "35%",
@@ -2781,13 +2781,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Shiro", " Kiragi", " Asugi", " Hisame", " Dwyer", " Siegbert (Revelation only)", " Ignatius (Revelation only)"],
+      "romanticSupports": [" The Corrin (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Shiro", " Kiragi", " Asugi", " Hisame", " Dwyer", " Siegbert (Revelation only)", " Ignatius (Revelation only)"],
       "otherSupports": []
     },
     "Rhajat": {
       "characterName": "Rhajat",
       "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/e/e6/Heroes_Rhajat_Sprite.png/revision/latest/scale-to-width-down/90?cb=20180612160012\" \t alt=\"Heroes Rhajat Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Rhajat_Sprite.png\" \tdata-image-name=\"Heroes Rhajat Sprite.png\" \t \t width=\"90\"  \t height=\"126\"  \t \t \t \t>",
-      "baseClasses": [],
+      "baseClasses": ["Diviner"],
       "growthRates": {
         "hp": "40%",
         "str": "15%",
@@ -2812,8 +2812,8 @@
     },
     "Selkie": {
       "characterName": "Selkie",
-      "startingClass": "",
-      "baseClasses": [],
+      "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/5/5a/Heroes_Selkie_Sprite.png/revision/latest/scale-to-width-down/120?cb=20190316151550\" \t alt=\"Heroes Selkie Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Selkie_Sprite.png\" \tdata-image-name=\"Heroes Selkie Sprite.png\" \t \t width=\"120\"  \t height=\"148\"  \t \t \t \t>",
+      "baseClasses": ["Kitsune"],
       "growthRates": {
         "hp": "35%",
         "str": "30%",
@@ -2833,13 +2833,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Shiro", "Kiragi", "Asugi", "Hisame", "Dwyer", "Forrest (Revelation only)", "Ignatius (Revelation only)"],
+      "romanticSupports": ["Corrin (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Shiro", "Kiragi", "Asugi", "Hisame", "Dwyer", "Forrest (Revelation only)", "Ignatius (Revelation only)"],
       "otherSupports": []
     },
     "Siegbert": {
       "characterName": "Siegbert",
       "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/0/06/Heroes_Siegbert_Sprite.png/revision/latest/scale-to-width-down/150?cb=20180612160241\" \t alt=\"Heroes Siegbert Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Siegbert_Sprite.png\" \tdata-image-name=\"Heroes Siegbert Sprite.png\" \t \t width=\"150\"  \t height=\"162\"  \t \t \t \t>",
-      "baseClasses": [],
+      "baseClasses": ["Cavalier"],
       "growthRates": {
         "hp": "40%",
         "str": "45%",
@@ -2859,13 +2859,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Female) (Can also be his mother)", "Kana (Female)", "Midori", "Sophie", "Nina", "Soleil", "Velouria", "Ophelia", "Mitama (Revelation only)", "Caeldori (Revelation only)"],
-      "otherSupports": ["Xander", "Siegbert's Mother", "The Avatar (Male)", "Forrest", "Kana (Male) (Can also be his son or brother)", "Ignatius", "Shiro (Revelation only)", "Shigure - If Siegbert is his brother"]
+      "romanticSupports": ["Corrin (Female) (Can also be his mother)", "Kana (Female)", "Midori", "Sophie", "Nina", "Soleil", "Velouria", "Ophelia", "Mitama (Revelation only)", "Caeldori (Revelation only)"],
+      "otherSupports": ["Xander", "Siegbert's Mother", "Corrin (Male)", "Forrest", "Kana (Male) (Can also be his son or brother)", "Ignatius", "Shiro (Revelation only)", "Shigure - If Siegbert is his brother"]
     },
     "Forrest": {
       "characterName": "Forrest",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Troubadour"],
       "growthRates": {
         "hp": "55%",
         "str": "15%",
@@ -2885,13 +2885,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female) (Can also be his mother)", " Kana (Female)", "Nina", "Sophie", "Soleil", "Velouria", "Midori", "Ophelia", "Rhajat (Revelation only)", "Selkie (Revelation only)"],
-      "otherSupports": ["Leo", "Forrest's mother", "The Avatar (Male)", "Siegbert", "Ignatius", "Shigure (Can also be his brother)", "Kiragi (Revelation only)", "Kana (Male) - If Forrest is his brother or father"]
+      "romanticSupports": [" Corrin (Female) (Can also be his mother)", " Kana (Female)", "Nina", "Sophie", "Soleil", "Velouria", "Midori", "Ophelia", "Rhajat (Revelation only)", "Selkie (Revelation only)"],
+      "otherSupports": ["Leo", "Forrest's mother", "Corrin (Male)", "Siegbert", "Ignatius", "Shigure (Can also be his brother)", "Kiragi (Revelation only)", "Kana (Male) - If Forrest is his brother or father"]
     },
     "Soleil": {
       "characterName": "Soleil",
       "startingClass": "Mercenary",
-      "baseClasses": [],
+      "baseClasses": ["Mercenary"],
       "growthRates": {
         "hp": "25%",
         "str": "60%",
@@ -2911,13 +2911,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Dwyer", "Siegbert", "Ignatius", "Forrest", "Percy", "Kiragi (Revelation only)", "Asugi (Revelation only)"],
-      "otherSupports": ["Laslow", "Soleil's Mother", "The Avatar (Female) (Can also be her mother)", "Ophelia", "Nina", "Sophie", "Mitama (Revelation only)", "Kana (Female) - If Soleil is her mother"]
+      "romanticSupports": ["Corrin (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Dwyer", "Siegbert", "Ignatius", "Forrest", "Percy", "Kiragi (Revelation only)", "Asugi (Revelation only)"],
+      "otherSupports": ["Laslow", "Soleil's Mother", "Corrin (Female) (Can also be her mother)", "Ophelia", "Nina", "Sophie", "Mitama (Revelation only)", "Kana (Female) - If Soleil is her mother"]
     },
     "Ophelia": {
       "characterName": "Ophelia",
-      "startingClass": "",
-      "baseClasses": [],
+      "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/8/8a/Heroes_Ophelia_Sprite.png/revision/latest/scale-to-width-down/80?cb=20180916153855\" \t alt=\"Heroes Ophelia Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Ophelia_Sprite.png\" \tdata-image-name=\"Heroes Ophelia Sprite.png\" \t \t width=\"80\"  \t height=\"131\"  \t \t \t \t>",
+      "baseClasses": ["Dark Mage"],
       "growthRates": {
         "hp": "45%",
         "str": "15%",
@@ -2937,13 +2937,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Forrest", " Percy", " Siegbert", " Ignatius", " Shiro (Revelation)", " Hisame (Revelation)"],
-      "otherSupports": [" Odin", " Ophelia's Mother", " The Avatar (Female) (Can also be her mother)", " Soleil", " Midori", " Rhajat (Revelation)", " Kana (Female) - If Ophelia is her mother"]
+      "romanticSupports": [" Corrin (Male)", " Kana (Male) (Can also be her brother)", " Shigure (Can also be her brother)", " Dwyer", " Forrest", " Percy", " Siegbert", " Ignatius", " Shiro (Revelation)", " Hisame (Revelation)"],
+      "otherSupports": [" Odin", " Ophelia's Mother", " Corrin (Female) (Can also be her mother)", " Soleil", " Midori", " Rhajat (Revelation)", " Kana (Female) - If Ophelia is her mother"]
     },
     "Nina": {
       "characterName": "Nina",
-      "startingClass": "",
-      "baseClasses": [],
+      "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/b/b6/Heroes_Nina_Sprite.png/revision/latest/scale-to-width-down/130?cb=20181128141017\" \t alt=\"Heroes Nina Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Nina_Sprite.png\" \tdata-image-name=\"Heroes Nina Sprite.png\" \t \t width=\"130\"  \t height=\"158\"  \t \t \t \t>",
+      "baseClasses": ["Outlaw"],
       "growthRates": {
         "hp": "30%",
         "str": "45%",
@@ -2963,13 +2963,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Dwyer", "Ignatius", "Forrest", "Siegbert", "Percy", "Shiro (Revelation only)", "Asugi (Revelation only)"],
-      "otherSupports": ["Niles", "Nina's mother", "The Avatar (Female) (Can also be her mother)", "Soleil", "Velouria", "Caeldori (Revelation only)", "Kana (Female) - If Nina is her mother", "Kana (Male) - If Nina is his sister", "Shigure - If Nina is his sister"]
+      "romanticSupports": ["Corrin (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Dwyer", "Ignatius", "Forrest", "Siegbert", "Percy", "Shiro (Revelation only)", "Asugi (Revelation only)"],
+      "otherSupports": ["Niles", "Nina's mother", "Corrin (Female) (Can also be her mother)", "Soleil", "Velouria", "Caeldori (Revelation only)", "Kana (Female) - If Nina is her mother", "Kana (Male) - If Nina is his sister", "Shigure - If Nina is his sister"]
     },
     "Percy": {
       "characterName": "Percy",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Wyvern Rider"],
       "growthRates": {
         "hp": "30%",
         "str": "30%",
@@ -2989,13 +2989,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female) (Can also be his mother)", " Kana (Female)", " Midori ", " Sophie", " Soleil", " Velouria", " Nina", " Ophelia", " Mitama (Revelation only)", " Rhajat (Revelation only)"],
-      "otherSupports": [" Arthur", " Percy's Mother", " The Avatar(Male)", " Ignatius", " Dwyer", " Kana (Male) (Can also be his son or brother)", " Hisame (Revelation only)", " Shigure - If Percy is his brother"]
+      "romanticSupports": [" Corrin (Female) (Can also be his mother)", " Kana (Female)", " Midori ", " Sophie", " Soleil", " Velouria", " Nina", " Ophelia", " Mitama (Revelation only)", " Rhajat (Revelation only)"],
+      "otherSupports": [" Arthur", " Percy's Mother", " Corrin(Male)", " Ignatius", " Dwyer", " Kana (Male) (Can also be his son or brother)", " Hisame (Revelation only)", " Shigure - If Percy is his brother"]
     },
     "Ignatius": {
       "characterName": "Ignatius",
       "startingClass": "",
-      "baseClasses": [],
+      "baseClasses": ["Knight"],
       "growthRates": {
         "hp": "40%",
         "str": "50%",
@@ -3015,13 +3015,13 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": [" The Avatar (Female) (Can also be his mother)", " Kana (Female)", " Ophelia", " Soleil", " Nina", " Velouria", " Sophie", " Midori", " Selkie (Revelation only)", " Caeldori (Revelation only)"],
-      "otherSupports": [" Benny", " Ignatius' Mother", " The Avatar (Male)", " Forrest", " Percy", " Siegbert", " Asugi (Revelation only)", " Kana (Male) - If Ignatius is his father or brother", " Shigure - If Ignatius is his brother"]
+      "romanticSupports": [" Corrin (Female) (Can also be his mother)", " Kana (Female)", " Ophelia", " Soleil", " Nina", " Velouria", " Sophie", " Midori", " Selkie (Revelation only)", " Caeldori (Revelation only)"],
+      "otherSupports": [" Benny", " Ignatius' Mother", " Corrin (Male)", " Forrest", " Percy", " Siegbert", " Asugi (Revelation only)", " Kana (Male) - If Ignatius is his father or brother", " Shigure - If Ignatius is his brother"]
     },
     "Velouria": {
       "characterName": "Velouria",
-      "startingClass": "",
-      "baseClasses": [],
+      "startingClass": "<img src=\"https://vignette.wikia.nocookie.net/fireemblem/images/a/a6/Heroes_Velouria_Sprite.png/revision/latest/scale-to-width-down/100?cb=20190319121542\" \t alt=\"Heroes Velouria Sprite\"  \tclass=\"\" \t \tdata-image-key=\"Heroes_Velouria_Sprite.png\" \tdata-image-name=\"Heroes Velouria Sprite.png\" \t \t width=\"100\"  \t height=\"131\"  \t \t \t \t>",
+      "baseClasses": ["Wolfskin"],
       "growthRates": {
         "hp": "50%",
         "str": "50%",
@@ -3041,8 +3041,8 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Siegbert", "Forrest", "Dwyer", "Ignatius", "Percy", "Hisame (Revelation only)", "Kiragi (Revelation only)"],
-      "otherSupports": ["Keaton", "Velouria's Mother", "The Avatar (Female) (Can also be her mother)", "Kana (Female) (Can also be her daughter)", "Sophie", "Nina", "Selkie (Revelation only)"]
+      "romanticSupports": ["Corrin (Male)", "Kana (Male) (Can also be her brother)", "Shigure (Can also be her brother)", "Siegbert", "Forrest", "Dwyer", "Ignatius", "Percy", "Hisame (Revelation only)", "Kiragi (Revelation only)"],
+      "otherSupports": ["Keaton", "Velouria's Mother", "Corrin (Female) (Can also be her mother)", "Kana (Female) (Can also be her daughter)", "Sophie", "Nina", "Selkie (Revelation only)"]
     },
     "Anna": {
       "characterName": "Anna",
@@ -3067,8 +3067,8 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)"],
-      "otherSupports": ["Tiki", "The Avatar (Female)", "Morgan (If Anna is her mother)"]
+      "romanticSupports": ["Robin (Male)"],
+      "otherSupports": ["Tiki", "Robin (Female)", "Morgan (If Anna is her mother)"]
     },
     "Marth": {
       "characterName": "Marth",
@@ -3122,10 +3122,36 @@
       "romanticSupports": [],
       "otherSupports": []
     },
+    "Robin": {
+      "characterName": "Robin",
+      "startingClass": "Tactician",
+      "baseClasses": [],
+      "growthRates": {
+        "hp": "80*%",
+        "str": "55*%",
+        "mag": "50*%",
+        "skl": "50*%",
+        "spd": "50*%",
+        "lck": "55*%",
+        "def": "40*%",
+        "res": "30*%"
+      },
+      "maxStatModifiers": {
+        "str": "",
+        "mag": "",
+        "skl": "",
+        "spd": "",
+        "lck": "",
+        "def": "",
+        "res": ""
+      },
+      "romanticSupports": [],
+      "otherSupports": []
+    },
     "Lucina": {
       "characterName": "Lucina",
       "startingClass": "Lord",
-      "baseClasses": [],
+      "baseClasses": ["Lord", "Cavalier", "Archer", "Bride"],
       "growthRates": {
         "hp": "45%",
         "str": "35%",
@@ -3145,8 +3171,8 @@
         "def": "",
         "res": ""
       },
-      "romanticSupports": ["The Avatar (Male)", "Owain (The game lists their S support titles as 'Companions' due to them being cousins)", "Inigo (Can also be her brother)", "Brady (Can also be her brother)", "Gerome", "Laurent", "Yarne", "Male Morgan (Can also be her brother)"],
-      "otherSupports": ["Chrom", "Lucina's Mother", "The Avatar (Female) (Can also be Lucina's Mother)", "Kjelle (Can also be her sister)", "Cynthia (Can also be her sister)", "Tiki", "Female Morgan (Only if Lucina is her mother)"]
+      "romanticSupports": ["Robin (Male)", "Owain (The game lists their S support titles as 'Companions' due to them being cousins)", "Inigo (Can also be her brother)", "Brady (Can also be her brother)", "Gerome", "Laurent", "Yarne", "Male Morgan (Can also be her brother)"],
+      "otherSupports": ["Chrom", "Lucina's Mother", "Robin (Female) (Can also be Lucina's Mother)", "Kjelle (Can also be her sister)", "Cynthia (Can also be her sister)", "Tiki", "Female Morgan (Only if Lucina is her mother)"]
     }
   }
 }
