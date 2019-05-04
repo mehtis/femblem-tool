@@ -131,7 +131,6 @@ const classCrawl = ($, stat, gameNumber) => $(stat).parent().nextAll('.wikitable
   .filter( (i, el) => $(el).text() === gameNumber)
   .parent().siblings()
 
-
 const classStat = ($, index, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).eq(index).text().trim()
 
 const classWeapons = ($, stat, gameNumber) => $(classCrawl($, stat, gameNumber)).last().children()
