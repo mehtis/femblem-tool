@@ -12,7 +12,6 @@
     "watch": "nodemon scraper/server/main.js",
     "dev": "next client/",
     "build": "next build client/",
-    "prestart": "next build client/",
     "start": "next start client/ -p ${PORT}"
   },
   "author": "Niko Mehtonen",
