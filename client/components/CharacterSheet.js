@@ -92,7 +92,7 @@ const Portrait = (props) =>
     ?
     <div>
       <img
-        src={`../static/${props.gameName}/portraits/portrait_${props.characterName}.png`}
+        src={`./static/${props.gameName}/portraits/portrait_${props.characterName}.png`}
         alt={props.characterName}
         onError={props.error}
       />
