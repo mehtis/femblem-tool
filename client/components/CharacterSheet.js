@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const imagePath = (gameName, characterName) => process.env.NODE_ENV === 'production' ? `_next/static/${gameName}/portraits/portrait_${characterName}.png` : `/static/${gameName}/portraits/portrait_${characterName}.png`
 
 const StatTable = (props) => (
   <div>
@@ -93,7 +92,7 @@ const Portrait = (props) =>
     ?
     <div>
       <img
-        src={imagePath(props.gameName, props.characterName)}
+        src={`/static/${props.gameName}/portraits/portrait_${props.characterName}.png`}
         alt={props.characterName}
         onError={props.error}
       />
